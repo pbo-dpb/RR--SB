@@ -1,0 +1,1 @@
+Le directeur parlementaire du budget a établi cet outil pour permettre aux parlementaires et au grand public d'estimer approximativement l’incidence sur les recettes des changements au régime fiscal fédéral.
