@@ -19,4 +19,12 @@ export default class Strings {
         }
         
     }
+
+    __(key, replace={}) {
+        let s = this[key];
+        for (const replaceKey in replace) {
+            s = s.replaceAll(`:${replaceKey}`, `${replace[replaceKey]}`)
+          }
+        return s;
+    }
 }

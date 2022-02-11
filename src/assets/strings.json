@@ -10,5 +10,9 @@
     "outro": {
         "en": null,
         "fr": null
+    },
+    "last_updated": {
+        "en": "Last updated in :date",
+        "fr": "Dernière mise à jour en :date"
     }
 }
