@@ -1,4 +1,14 @@
-<template>{{ $root.strings.intro }}</template>
+<template><div v-html="intro" class="prose lg:prose-xl max-w-none"></div></template>
 <script>
-export default {};
+import { Remarkable } from "remarkable";
+
+export default {
+  computed: {
+    intro() {
+      if (!this.$root.strings.intro) return "";
+      var md = new Remarkable();
+      return md.render(this.$root.strings.intro);
+    },
+  },
+};
 </script>

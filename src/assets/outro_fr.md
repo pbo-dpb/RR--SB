@@ -1,0 +1,1 @@
+Une partie de cette analyse est fondée sur la Base de données et Modèle de simulation de politiques sociales. Voir le Guide de l’utilisateur pour plus d’informations. Les hypothèses et les calculs qui sous-tendent les résultats de la simulation sont ceux du DPB, et la responsabilité de l’utilisation et de l’interprétation de ces données incombe entièrement aux auteurs.
