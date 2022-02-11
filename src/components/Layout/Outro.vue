@@ -1,4 +1,7 @@
-<template><div v-html="outro" class="prose max-w-none"></div></template>
+<template>
+  <div v-html="outro" class="prose max-w-none"></div>
+</template>
+
 <script>
 import { Remarkable } from "remarkable";
 
