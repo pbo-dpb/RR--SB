@@ -1,3 +1,478 @@
 {
-    "hello":"world"
+    "total_revenue":340200000000,
+    "last_update": "2021-08-01",
+    "sections": [
+        {
+            "title_en": "Marginal Tax Rates",
+            "title_fr": "Taux marginaux d'imposition",
+            "description_en": "Users can adjust any or all of the four personal tax rates, as well as the corresponding tax-bracket thresholds. Note that all rate and threshold changes are considered independently of other tax changes.",
+            "description_fr": "L'utilisateur peut modifier les quatre taux d'imposition du revenu des particuliers, ainsi que les seuils correspondant à chacun. Les changements aux taux et aux seuils sont considérés comme indépendants des autres changements au régime fiscal.",
+            "questions": [
+                {
+                    "name_en": "Lowest Rate",
+                    "name_fr": "Taux le moins élevé",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 15,
+                    "unit_value_down": 4696014294,
+                    "unit_value_up": 4696014294,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 13.0,
+                    "maximum": 15.0,
+                    "step": 0.25
+                },
+                {
+                    "name_en": "Second Rate",
+                    "name_fr": "Deuxième taux",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 20.5,
+                    "unit_value_down": 3066295911,
+                    "unit_value_up": 3066295911,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 18.5,
+                    "maximum": 22.5,
+                    "step": 0.25
+                },
+                {
+                    "name_en": "Third Rate",
+                    "name_fr": "Troisième taux",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 26,
+                    "unit_value_down": 864569213,
+                    "unit_value_up": 864569213,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 24.0,
+                    "maximum": 28.0,
+                    "step": 0.25
+                },
+                {
+                    "name_en": "Fourth Rate",
+                    "name_fr": "Quatrième taux",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 29,
+                    "unit_value_down": 290774448,
+                    "unit_value_up": 290774448,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 27.0,
+                    "maximum": 31.0,
+                    "step": 0.25
+                },
+                {
+                    "name_en": "Highest rate",
+                    "name_fr": "Taux le plus élevé",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 33,
+                    "unit_value_down": 372801274,
+                    "unit_value_up": 372801274,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 31.0,
+                    "maximum": 35.0,
+                    "step": 0.25
+                }
+            ]
+        },
+        {
+            "title_en": "Tax Brackets",
+            "title_fr": "Tranche d'imposition",
+            "description_en": "Users can adjust any or all of the four personal tax rates, as well as the corresponding tax-bracket thresholds. Note that all rate and threshold changes are considered independently of other tax changes.",
+            "description_fr": "L'utilisateur peut modifier les quatre taux d'imposition du revenu des particuliers, ainsi que les seuils correspondant à chacun. Les changements aux taux et aux seuils sont considérés comme indépendants des autres changements au régime fiscal.",
+            "questions": [
+                {
+                    "name_en": "Second Bracket Threshold",
+                    "name_fr": "Deuxième seuil",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 50412,
+                    "unit_value_down": -637734,
+                    "unit_value_up": -637734,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 30412.0,
+                    "maximum": 70412.0,
+                    "step": 2500.0
+                },
+                {
+                    "name_en": "Third Bracket Threshold",
+                    "name_fr": "Troisième seuil",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 100824,
+                    "unit_value_down": -166017,
+                    "unit_value_up": -166017,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 80824.0,
+                    "maximum": 120824.0,
+                    "step": 2500.0
+                },
+                {
+                    "name_en": "Fourth Bracket Threshold",
+                    "name_fr": "Quatrième seuil",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 156294,
+                    "unit_value_down": -28190,
+                    "unit_value_up": -28190,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 136294.0,
+                    "maximum": 176294.0,
+                    "step": 2500.0
+                },
+                {
+                    "name_en": "Top Bracket Threshold",
+                    "name_fr": "Seuil le plus élevé",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 222661,
+                    "unit_value_down": -7821,
+                    "unit_value_up": -7821,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 202661.0,
+                    "maximum": 242661.0,
+                    "step": 2500.0
+                }
+            ]
+        },
+        {
+            "title_en": "Basic Personal and Spousal Amounts",
+            "title_fr": "Montant personnel de base et montant pour conjoint",
+            "description_en": null,
+            "description_fr": null,
+            "questions": [
+                {
+                    "name_en": "Basic Personal Amount",
+                    "name_fr": "Montant personnel de base",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 12398,
+                    "unit_value_down": -3340584,
+                    "unit_value_up": -3340584,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 10398.0,
+                    "maximum": 14398.0,
+                    "step": 250.0
+                },
+                {
+                    "name_en": "Spousal/Equivalent to Spousal Amount",
+                    "name_fr": "Montant/Équivalent du montant pour conjoint",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 12398,
+                    "unit_value_down": -300080,
+                    "unit_value_up": -300080,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 10398.0,
+                    "maximum": 14398.0,
+                    "step": 250.0
+                }
+            ]
+        },
+        {
+            "title_en": "Goods and Services Tax (GST)",
+            "title_fr": "Taxe sur les produits et services (TPS)",
+            "description_en": "The GST is a federal tax paid on the purchase of most property and services in Canada.",
+            "description_fr": "La TPS est une taxe fédérale payée à l'achat de la plupart des produits et services au Canada.",
+            "questions": [
+                {
+                    "name_en": "By 0.25 percentage points",
+                    "name_fr": "De 0,25 points de pourcentage",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 5,
+                    "unit_value_down": 8500238953,
+                    "unit_value_up": 8500238953,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 3.0,
+                    "maximum": 7.0,
+                    "step": 0.25
+                }
+            ]
+        },
+        {
+            "title_en": "GST Credit for a Family of Four",
+            "title_fr": "Crédit pour TPS d'une famille de quatre personnes",
+            "description_en": "The GST Credit is a series of needs tested tax free payments that helps families offset a portion of the GST that they pay.  The credit it calculated as a function of an individual's partners and dependants. There is a higher benefit provided for an initial dependent and a reduced benefit for every subsequent dependent.  This benefit is phased out as income passes a certain threshold.",
+            "description_fr": "On appelle crédit pour TPS une série de paiements fondés sur l'évaluation des besoins qui aident les familles à recouvrer une partie de la TPS qu'elles paient. Le montant de ce crédit non imposable dépend de l'état civil et du nombre de personnes à charge. La prestation est plus élevée pour la première personne à charge, et réduite pour les personnes à charge subséquentes. Elle est réduite progressivement lorsque le revenu dépasse un certain seuil.",
+            "questions": [
+                {
+                    "name_en": "$50 change in adult benefit",
+                    "name_fr": "Changement de 50 $ du crédit pour adulte",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 307,
+                    "unit_value_down": -15687767,
+                    "unit_value_up": -15687767,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 107.0,
+                    "maximum": 507.0,
+                    "step": 50.0
+                },
+                {
+                    "name_en": "$25 change in dependant benefit",
+                    "name_fr": "Changement de 50 $ du crédit pour enfant",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 161,
+                    "unit_value_down": -8913078,
+                    "unit_value_up": -8913078,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 61.0,
+                    "maximum": 261.0,
+                    "step": 25.0
+                },
+                {
+                    "name_en": "$1,000 change in phase-out threshold",
+                    "name_fr": "Changement de 1 000 $ du seuil de réduction progressive",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 39997,
+                    "unit_value_down": -118301,
+                    "unit_value_up": -118301,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 34997.0,
+                    "maximum": 44997.0,
+                    "step": 1000.0
+                }
+            ]
+        },
+        {
+            "title_en": "Canada Child Benefit",
+            "title_fr": "Allocation canadienne pour enfants",
+            "description_en": "The Canada child benefit (CCB) is a tax-free monthly payment made to eligible families to help them with the cost of raising children under 18 years of age.",
+            "description_fr": "L'Allocation canadienne pour enfants (ACE) est un paiement mensuel non imposable versé aux familles admissibles pour les aider à subvenir aux besoins de leurs enfants de moins de 18 ans.",
+            "questions": [
+                {
+                    "name_en": "$50 change in annual per child benefit",
+                    "name_fr": "Changement de $50 dans la prestation annuelle par enfant",
+                    "description_en": "This will change the annual maximum benefit provided for each child.",
+                    "description_fr": "Cela changera la prestation annuelle maximale accordée à chaque enfant.",
+                    "default_value": 0,
+                    "unit_value_down": -6874432,
+                    "unit_value_up": -6874432,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": -250.0,
+                    "maximum": 250.0,
+                    "step": 50.0
+                },
+                {
+                    "name_en": "$1,000 change in income thresholds for the phase-out rate",
+                    "name_fr": "Changement de $1,000 dans les seuils de revenu pour le taux de réduction progressive",
+                    "description_en": "This will change the $30,000 and $65,000 income thresholds for the phase-out rates.",
+                    "description_fr": "Cela changera les seuils de revenu de 30 000 $ et de 65 000 $ pour le taux de réduction progressive",
+                    "default_value": 0,
+                    "unit_value_down": -222851,
+                    "unit_value_up": -222851,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": -10000.0,
+                    "maximum": 10000.0,
+                    "step": 1000.0
+                },
+                {
+                    "name_en": "0.25 percentage points change in phase-out rate",
+                    "name_fr": "Changement de 0,25 points de pourcentage dans le taux de réduction progressive",
+                    "description_en": "Increasing (decreasing) the phase-out rate will reduce (raise) benefits paid for each child.",
+                    "description_fr": "L'augmentation (diminution) le taux de réduction réduira les prestations versées pour chaque enfant.",
+                    "default_value": 0,
+                    "unit_value_down": -1890198963,
+                    "unit_value_up": -1890198963,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": -1.0,
+                    "maximum": 1.0,
+                    "step": 0.25
+                }
+            ]
+        },
+        {
+            "title_en": "Capital Gains Inclusion Rate",
+            "title_fr": "Taux d'inclusion des gains en capital",
+            "description_en": "The Capital Gains Inclusion Rate is used to determine taxable capital gains and allowable capital losses for individuals and corporations. ",
+            "description_fr": "Le taux d'inclusion des gains en capital est utilisé pour déterminer les gains en capital imposables et les pertes en capital déductibles pour les particuliers et les sociétés.",
+            "questions": [
+                {
+                    "name_en": "By 5 percentage points",
+                    "name_fr": "De 5 points de pourcentage",
+                    "description_en": "Increasing this rate increases the share of taxable capital gains for individuals and corporations.",
+                    "description_fr": "La hausse de ce taux augmente la part des gains en capital imposables pour les particuliers et les sociétés.",
+                    "default_value": 50,
+                    "unit_value_down": 375540000,
+                    "unit_value_up": 375540000,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 25.0,
+                    "maximum": 75.0,
+                    "step": 5.0
+                }
+            ]
+        },
+        {
+            "title_en": "Tobacco Excise Duty Rate",
+            "title_fr": "Taux de la taxe d'accise sur le tabac",
+            "description_en": "Duty is payable at the point of packaging. When goods are imported to Canada, duty is paid by the importer.",
+            "description_fr": "Les droits sont payables à l'emballage. Lorsque des marchandises sont importées au Canada, les droits sont payés par l'importateur.",
+            "questions": [
+                {
+                    "name_en": "$0.5 change in rate per 200 cigarettes",
+                    "name_fr": "0,5 $ de changement de taux pour 200 cigarettes",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 29.5,
+                    "unit_value_down": 121938300,
+                    "unit_value_up": 121938300,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 25.5,
+                    "maximum": 33.5,
+                    "step": 1.0
+                }
+            ]
+        },
+        {
+            "title_en": "Alcohol Excise Duty Rates",
+            "title_fr": "Taux de la taxe d'accise sur l'alcool",
+            "description_en": "Duty is payable at the point of packaging. When goods are imported to Canada, duty is paid by the importer. The rates of excise duty on alcoholic products are set based on alcoholic content, production volume, and/or the location of brewing.",
+            "description_fr": "Les droits sont payables à l'emballage. Lorsque des marchandises sont importées au Canada, les droits sont payés par l'importateur. Les taux des droits d'accise sur les produits alcoolisés varient en fonction du produit, de la teneur en alcool, du volume de production du brasseur ou de l'endroit où se trouve ce dernier.",
+            "questions": [
+                {
+                    "name_en": "Spirits",
+                    "name_fr": "Spiritueux",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 0,
+                    "unit_value_down": 8016562,
+                    "unit_value_up": 8016562,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": -4.0,
+                    "maximum": 4.0,
+                    "step": 0.5
+                },
+                {
+                    "name_en": "Spirit Coolers",
+                    "name_fr": "Panachés",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 0,
+                    "unit_value_down": 685470,
+                    "unit_value_up": 685470,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": -4.0,
+                    "maximum": 4.0,
+                    "step": 0.5
+                },
+                {
+                    "name_en": "Beer",
+                    "name_fr": "Bière",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 0,
+                    "unit_value_down": 6886646,
+                    "unit_value_up": 6886646,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": -4.0,
+                    "maximum": 4.0,
+                    "step": 0.5
+                },
+                {
+                    "name_en": "Wine",
+                    "name_fr": "Vin",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 0,
+                    "unit_value_down": 3242820,
+                    "unit_value_up": 3242820,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": -4.0,
+                    "maximum": 4.0,
+                    "step": 0.5
+                }
+            ]
+        },
+        {
+            "title_en": "Corporate Income Taxes",
+            "title_fr": "Impôt sur le revenu des sociétés",
+            "description_en": "Corporate income taxes apply to corporations, with small Canadian-controlled private corporations being eligible for a reduced rate.",
+            "description_fr": "L'impôt sur les bénéfices ne frappe que les sociétés; les petites sociétés privées sous contrôle canadien sont toutefois admissibles à un taux d'imposition réduit.",
+            "questions": [
+                {
+                    "name_en": "General Corporate Rate",
+                    "name_fr": "Taux général d'impôt des sociétés",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 15,
+                    "unit_value_down": 1556610044,
+                    "unit_value_up": 1556610044,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 10,
+                    "maximum": 20,
+                    "step": 1.0
+                },
+                {
+                    "name_en": "Small Business Rate",
+                    "name_fr": "Taux pour les petites entreprises",
+                    "description_en": "Increasing the small business rate increases the tax payable by small corporations on the income below the small business limit.",
+                    "description_fr": "Une augmentation du taux d'impôt sur les bénéfices des petites entreprises augmente l'impôt payable par ces sociétés sur leur revenu inférieur au plafond des affaires.",
+                    "default_value": 9,
+                    "unit_value_down": 420490356,
+                    "unit_value_up": 420490356,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 6.0,
+                    "maximum": 12.0,
+                    "step": 1.0
+                },
+                {
+                    "name_en": "$100,000 Change in Small Business Income Limit",
+                    "name_fr": "Variation de 100 000 $ du plafond des affaires des petites entreprises",
+                    "description_en": "This would vary the amount of income for small Canadian-controlled private corporations that could be taxed at the small business rate. The income above this amount is taxed at the general corporate rate.",
+                    "description_fr": "Cela varierait le montant du revenu des petites sociétés privées sous contrôle canadien qui pourrait être imposé au taux des petites entreprises. Les revenus supérieurs à ce montant sont imposés au taux général des sociétés.",
+                    "default_value": 500000,
+                    "unit_value_down": 2575,
+                    "unit_value_up": 2575,
+                    "unit_name_en": "$",
+                    "unit_name_fr": "$",
+                    "minimum": 400000.0,
+                    "maximum": 600000.0,
+                    "step": 100000.0
+                },
+                {
+                    "name_en": "Tax Rate on Manufacturing and Processing Profits",
+                    "name_fr": "Taux d'imposition sur les bénéfices de fabrication et de transformation",
+                    "description_en": null,
+                    "description_fr": null,
+                    "default_value": 15,
+                    "unit_value_down": 236121539,
+                    "unit_value_up": 236121539,
+                    "unit_name_en": "%",
+                    "unit_name_fr": "%",
+                    "minimum": 13.0,
+                    "maximum": 17.0,
+                    "step": 1.0
+                }
+            ]
+        }
+    ]
 }
