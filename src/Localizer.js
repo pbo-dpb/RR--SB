@@ -4,7 +4,7 @@ import introFr from "./assets/intro_fr.md?raw";
 import outroEn from "./assets/outro_en.md?raw";
 import outroFr from "./assets/outro_fr.md?raw";
 
-export default class Strings {
+export default class Localizer {
     constructor(language) {
         let strings = JSON.parse(rawStrings);
 

@@ -14,12 +14,13 @@
 </template>
 
 <script>
-import Strings from "./Strings.js";
+import Localizer from "./Localizer.js";
 import payloadUrl from "./assets/payload.json?url";
 import Intro from "./components/Layout/Intro.vue";
 import Meta from "./components/Layout/Meta.vue";
 import Outro from "./components/Layout/Outro.vue";
 import LoadingIndicator from "./components/Utilities/LoadingIndicator.vue";
+import Section from "./Models/Section.js";
 
 const language = document.documentElement.lang;
 
@@ -27,7 +28,7 @@ export default {
   data() {
     return {
       language: language,
-      strings: new Strings(language),
+      strings: new Localizer(language),
       payload: null,
     };
   },
@@ -41,6 +42,7 @@ export default {
     fetch(payloadUrl)
       .then((r) => r.json())
       .then((j) => {
+        j.sections = j.sections.map((section) => new Section(section));
         this.payload = j;
       });
   },
