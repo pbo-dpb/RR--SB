@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm text-gray-800 mb-8">
+  <div class="text-sm italic text-gray-700 text-center border-b border-gray-100 pb-4">
     {{ $root.strings.__("last_updated", { date: localizedLastUpdate }) }}.
   </div>
 </template>

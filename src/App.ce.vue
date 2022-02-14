@@ -1,5 +1,7 @@
 <template>
-  <Intro></Intro>
+  <div class="mb-4">
+    <Intro></Intro>
+  </div>
   <div aria-live="polite" :aria-busy="!payload">
     <loading-indicator
       v-if="!payload"
@@ -7,7 +9,11 @@
       class="w-8 h-8"
     ></loading-indicator>
     <template v-else>
-      <Meta></Meta>
+      <div class="flex flex-col gap-4 mb-4">
+        <Meta></Meta>
+
+        <Sections></Sections>
+      </div>
     </template>
   </div>
   <Outro></Outro>
@@ -16,9 +22,10 @@
 <script>
 import Localizer from "./Localizer.js";
 import payloadUrl from "./assets/payload.json?url";
-import Intro from "./components/Layout/Intro.vue";
-import Meta from "./components/Layout/Meta.vue";
-import Outro from "./components/Layout/Outro.vue";
+import Intro from "./components/Meta/Intro.vue";
+import Meta from "./components/Meta/Meta.vue";
+import Outro from "./components/Meta/Outro.vue";
+import Sections from "./components/Body/Sections.vue";
 import LoadingIndicator from "./components/Utilities/LoadingIndicator.vue";
 import Section from "./Models/Section.js";
 
@@ -37,6 +44,7 @@ export default {
     Meta,
     Outro,
     LoadingIndicator,
+    Sections,
   },
   mounted() {
     fetch(payloadUrl)
