@@ -14,5 +14,9 @@
     "last_updated": {
         "en": "Last updated in :date",
         "fr": "Dernière mise à jour en :date"
+    },
+    "impact_in_millions": {
+        "en":"All revenue impacts in millions",
+        "fr":"L'incidence sur les recettes est exprimée en millions de dollars"
     }
 }

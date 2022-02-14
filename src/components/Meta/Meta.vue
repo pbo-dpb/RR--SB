@@ -1,7 +1,18 @@
 <template>
-  <div class="text-sm italic text-gray-700 text-center border-b border-gray-100 pb-4">
-    {{ $root.strings.__("last_updated", { date: localizedLastUpdate }) }}.
-  </div>
+  <ul
+    class="pb-4 text-sm italic flex flex-col md:flex-row justify-center border-b border-gray-100"
+  >
+    <li class="text-gray-700 text-center">
+      {{ $root.strings.__("last_updated", { date: localizedLastUpdate }) }}
+    </li>
+    <li class="hidden md:block text-gray-500 mx-2" aria-hidden="true" role="separator">
+      •
+    </li>
+
+    <li class="text-gray-700 text-center">
+      {{ $root.strings.impact_in_millions }}
+    </li>
+  </ul>
 </template>
 <script>
 export default {
