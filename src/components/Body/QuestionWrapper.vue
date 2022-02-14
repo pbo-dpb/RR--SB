@@ -11,8 +11,18 @@
         {{ question.description }}
       </p>
     </div>
-    <div class="">&mdash;</div>
-    <div class="lg:col-span-2 w-full">
+    <div class="text-center">
+      <span
+        class="bordered text-white print:text-black font-semibold text-sm px-1 py-.5 rounded-sm"
+        :class="{
+          'bg-red-800': question.isAltered < 0,
+          'bg-green-800': question.isAltered > 0,
+          'bg-gray-500': !question.isAltered,
+        }"
+        >{{ question.user_value }}</span
+      >
+    </div>
+    <div class="lg:col-span-2 w-full print:hidden">
       <question-range :uid="uid" :question="question"></question-range>
     </div>
   </div>

@@ -1,6 +1,11 @@
 <template>
   <figure class="">
-    <h3 class="text-lg font-semibold mb-4">{{ section.title }}</h3>
+    <h3
+      class="text-lg font-semibold"
+      :class="{ 'mb-4': !section.description, 'mb-2': section.description }"
+    >
+      {{ section.title }}
+    </h3>
     <p v-if="section.description" class="prose max-w-none mb-4 leading-tight">
       {{ section.description }}
     </p>

@@ -8,7 +8,7 @@
       step="10"
       class="w-full"
       :id="uid"
-      v-model="modelValue"
+      v-model="question.user_value"
     />
     <datalist id="tickmarks">
       <option value="0"></option>
@@ -47,11 +47,6 @@ export default {
       type: Question,
       required: true,
     },
-  },
-  data() {
-    return {
-      modelValue: 50,
-    };
   },
 };
 </script>

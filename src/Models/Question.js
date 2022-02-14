@@ -8,5 +8,12 @@ export default class Question {
         for (const [key, value] of Object.entries(o)) {
             this[key] = value
         }
+
+        this.user_value = o.default_value.valueOf();
+    }
+
+    get isAltered() {
+        if (this.user_value == this.default_value) return 0;
+        return this.user_value > this.default_value ? 1 : -1;
     }
 }
