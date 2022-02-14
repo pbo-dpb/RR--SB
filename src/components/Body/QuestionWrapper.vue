@@ -54,8 +54,20 @@ export default {
   },
   data() {
     return {
-      uid: `question-range-${Math.floor(Math.random() * 65536)}`,
+      ruid: `qura-${Math.floor(Math.random() * 65536)}`,
     };
+  },
+  computed: {
+    uid() {
+      return `${this.ruid}-${(
+        "" +
+        this.question.minimum +
+        this.question.maximum +
+        this.question.step
+      )
+        .match(/\d/g)
+        .join("")}`;
+    },
   },
 };
 </script>

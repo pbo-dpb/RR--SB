@@ -2,7 +2,7 @@
   <div class="w-full flex flex-col">
     <input
       type="range"
-      list="tickmarks"
+      :list="`tickmarks-${uid}`"
       :min="question.minimum"
       :max="question.maximum"
       :step="question.step"
@@ -10,8 +10,12 @@
       :id="uid"
       v-model="question.user_value"
     />
-    <datalist id="tickmarks">
-      <option v-for="tick in ticks" :value="tick"></option>
+    <datalist :id="`tickmarks-${uid}`">
+      <option
+        v-for="tick in tickmarks"
+        :value="tick"
+        :key="question.name + tick"
+      ></option>
     </datalist>
     <div class="flex flex-row justify-between text-sm text-gray-600" aria-hidden="true">
       <span>{{ $root.strings.formatNumber(question.minimum, question.unit_style) }}</span>
@@ -46,7 +50,7 @@ export default {
       for (
         let i = this.question.minimum;
         i <= this.question.maximum;
-        i + this.question.step
+        i = i + this.question.step
       ) {
         ticks.push(i);
       }

@@ -6,7 +6,7 @@
     <loading-indicator
       v-if="!payload"
       aria-hidden="true"
-      class="w-8 h-8"
+      class="w-8 h-8 mb-8"
     ></loading-indicator>
     <template v-else>
       <div class="flex flex-col gap-8 mb-8">
