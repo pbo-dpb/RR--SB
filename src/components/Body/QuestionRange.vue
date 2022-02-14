@@ -3,29 +3,19 @@
     <input
       type="range"
       list="tickmarks"
-      min="0"
-      max="100"
-      step="10"
+      :min="question.minimum"
+      :max="question.maximum"
+      :step="question.step"
       class="w-full"
       :id="uid"
       v-model="question.user_value"
     />
     <datalist id="tickmarks">
-      <option value="0"></option>
-      <option value="10"></option>
-      <option value="20"></option>
-      <option value="30"></option>
-      <option value="40"></option>
-      <option value="50"></option>
-      <option value="60"></option>
-      <option value="70"></option>
-      <option value="80"></option>
-      <option value="90"></option>
-      <option value="100"></option>
+      <option v-for="tick in ticks" :value="tick"></option>
     </datalist>
     <div class="flex flex-row justify-between text-sm text-gray-600" aria-hidden="true">
-      <span>0</span>
-      <span>100</span>
+      <span>{{ $root.strings.formatNumber(question.minimum, question.unit_style) }}</span>
+      <span>{{ $root.strings.formatNumber(question.maximum, question.unit_style) }}</span>
     </div>
   </div>
 </template>
@@ -46,6 +36,21 @@ export default {
     question: {
       type: Question,
       required: true,
+    },
+  },
+  computed: {
+    tickmarks() {
+      let ticks = [];
+
+      // Get default and under
+      for (
+        let i = this.question.minimum;
+        i <= this.question.maximum;
+        i + this.question.step
+      ) {
+        ticks.push(i);
+      }
+      return ticks;
     },
   },
 };

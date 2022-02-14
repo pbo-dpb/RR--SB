@@ -17,7 +17,7 @@ export default class Localizer {
         for (const [key, value] of Object.entries(strings)) {
             this[key] = value[language]
         }
-        
+        this.language = language;
     }
 
     __(key, replace={}) {
@@ -26,5 +26,17 @@ export default class Localizer {
             s = s.replaceAll(`:${replaceKey}`, `${replace[replaceKey]}`)
           }
         return s;
+    }
+
+    formatNumber(number, style=":value") {
+        const locale = `${this.language}-CA`;
+        switch (style) {
+            case 'currency':
+                return new Intl.NumberFormat(locale, { style: 'currency',"currency": "CAD", maximumFractionDigits:0}).format(number);
+            case 'percent':
+                return new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits:2}).format(number/100);
+        }
+        
+        return style.replaceAll(':value', (new Intl.NumberFormat(locale).format(number))); 
     }
 }
