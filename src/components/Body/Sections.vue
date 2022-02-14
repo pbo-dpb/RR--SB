@@ -1,8 +1,8 @@
 <template>
-  <main class="flex flex-col gap-4">
+  <main class="flex flex-col gap-8">
     <SectionView
       v-for="section in $root.payload.sections"
-      :key="section.title_en"
+      :key="section.title"
       :section="section"
     ></SectionView>
   </main>

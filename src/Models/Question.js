@@ -1,7 +1,7 @@
 export default class Question {
     constructor(o) {
         const language = document.documentElement.lang;
-        this.title = o[`title_${language}`];
+        this.name = o[`name_${language}`];
         this.description = o[`description_${language}`];
         this.unit_name = o[`unit_name_${language}`];
 

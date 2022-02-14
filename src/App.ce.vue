@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-4">
+  <div class="mb-8">
     <Intro></Intro>
   </div>
   <div aria-live="polite" :aria-busy="!payload">
@@ -9,9 +9,8 @@
       class="w-8 h-8"
     ></loading-indicator>
     <template v-else>
-      <div class="flex flex-col gap-4 mb-4">
+      <div class="flex flex-col gap-8 mb-8">
         <Meta></Meta>
-
         <Sections></Sections>
       </div>
     </template>
