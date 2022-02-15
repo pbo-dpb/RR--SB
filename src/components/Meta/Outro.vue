@@ -12,7 +12,7 @@ export default {
   computed: {
     outro() {
       if (!this.$root.strings.outro) return "";
-      var md = new Remarkable();
+      const md = new Remarkable();
       return md.render(this.$root.strings.outro);
     },
   },
