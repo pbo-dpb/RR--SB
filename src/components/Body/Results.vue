@@ -1,9 +1,9 @@
 <template>
   <main class="flex flex-col gap-8 sticky bottom-0 w-full left-0">
     <div
-      v-if="balance"
+      v-if="$root.balance"
       class="text-white w-full prose max-w-none p-2 text-center rounded mb-2 leading-tight"
-      :class="{ 'bg-green-800': balance > 0, 'bg-red-800': balance < 0 }"
+      :class="{ 'bg-green-800': $root.balance > 0, 'bg-red-800': $root.balance < 0 }"
       v-html="fullTextTotal"
     ></div>
   </main>
@@ -15,28 +15,16 @@ import { Remarkable } from "remarkable";
 export default {
   computed: {
     absoluteBalance() {
-      return Math.abs(this.balance) / 1000000;
+      return Math.abs(this.$root.balance) / 1000000;
     },
-    balance() {
-      return this.$root.payload.sections.reduce((scarry, section) => {
-        return (
-          scarry +
-          section.questions.reduce((qcarry, question) => {
-            return qcarry + question.userValueImpact;
-          }, 0)
-        );
-      }, 0);
-    },
-    percentageOfTotalRevenue() {
-      return (this.balance * 100) / this.$root.payload.total_revenue;
-    },
+    
     fullTextTotal() {
       const md = new Remarkable();
       return md.render(
-        this.$root.strings.__(this.balance > 0 ? "total_increase" : "total_decrease", {
+        this.$root.strings.__(this.$root.balance > 0 ? "total_increase" : "total_decrease", {
           absbalance: this.$root.strings.formatNumber(this.absoluteBalance, "currency"),
           percent: this.$root.strings.formatNumber(
-            Math.abs(this.percentageOfTotalRevenue),
+            Math.abs(this.$root.percentageOfTotalRevenue),
             "percent"
           ),
         })

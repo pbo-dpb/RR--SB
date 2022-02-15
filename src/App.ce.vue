@@ -13,10 +13,9 @@
       <section class="flex flex-col lg:grid lg:grid-cols-4 gap-8 my-8">
         <div class="col-span-3 flex flex-col gap-8">
           <Sections></Sections>
-          
         </div>
         <div class="hidden lg:block lg:border-l border-gray-100 lg:pl-8">
-          <Sections></Sections>
+          <Sidebar></Sidebar>
         </div>
       </section>
       <Results></Results>
@@ -32,6 +31,7 @@ import Intro from "./components/Meta/Intro.vue";
 import Meta from "./components/Meta/Meta.vue";
 import Outro from "./components/Meta/Outro.vue";
 import Results from "./components/Body/Results.vue";
+import Sidebar from "./components/Sidebar/Sidebar.vue";
 
 import Sections from "./components/Body/Sections.vue";
 import LoadingIndicator from "./components/Utilities/LoadingIndicator.vue";
@@ -54,6 +54,7 @@ export default {
     LoadingIndicator,
     Sections,
     Results,
+    Sidebar,
   },
   mounted() {
     fetch(payloadUrl)
@@ -63,6 +64,21 @@ export default {
         this.payload = j;
       });
   },
+  computed: {
+    balance() {
+      return this.payload.sections.reduce((scarry, section) => {
+        return (
+          scarry +
+          section.questions.reduce((qcarry, question) => {
+            return qcarry + question.userValueImpact;
+          }, 0)
+        );
+      }, 0);
+    },
+    percentageOfTotalRevenue() {
+      return (this.balance * 100) / this.payload.total_revenue;
+    },
+  }
 };
 </script>
 <style>

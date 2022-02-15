@@ -7,4 +7,5 @@ export default class Section {
         this.description = o[`description_${language}`];
         this.questions = o.questions.map(q=>new Question(q))
     }
+
 }

@@ -34,5 +34,9 @@
     "total_decrease": {
         "en": "Your changes would *decrease* revenues by :absbalance million, or :percent of total revenues.",
         "fr": "Vos modifications *réduiraient* les revenus de :absbalance millions de dollars, ou :percent des recettes totales."
+    },
+    "sidebar_total_impact": {
+        "en": "Total impact",
+        "fr": "Impact total"
     }
 }
