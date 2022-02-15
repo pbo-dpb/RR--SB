@@ -12,12 +12,25 @@ export default class Question {
         this.user_value = o.default_value.valueOf();
     }
 
+    get impactPerUnit() {
+        return (Math.abs(this.unit_value_down) + Math.abs(this.unit_value_up)) / 2 * this.step;
+    }
+
     get isAltered() {
         if (this.user_value == this.default_value) return 0;
         return this.user_value > this.default_value ? 1 : -1;
     }
 
-    get impactPerUnit() {
-        return (Math.abs(this.unit_value_down) + Math.abs(this.unit_value_up)) / 2 * this.step / 1000000.0;
+    get userValueUnitDiffs() {
+        if (!this.isAltered) return 0;
+        return Math.abs(this.user_value-this.default_value) / this.step * this.isAltered;
+    }
+
+    get userValueImpact() {
+        if (this.isAltered > 0) {
+            return this.userValueUnitDiffs * (this.unit_value_up * this.step);
+        }
+        return this.userValueUnitDiffs * (this.unit_value_down * this.step);
+        
     }
 }

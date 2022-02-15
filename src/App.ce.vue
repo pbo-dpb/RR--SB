@@ -12,6 +12,7 @@
       <div class="flex flex-col gap-8 mb-8">
         <Meta></Meta>
         <Sections></Sections>
+        <Results></Results>
       </div>
     </template>
   </div>
@@ -24,6 +25,8 @@ import payloadUrl from "./assets/payload.json?url";
 import Intro from "./components/Meta/Intro.vue";
 import Meta from "./components/Meta/Meta.vue";
 import Outro from "./components/Meta/Outro.vue";
+import Results from "./components/Body/Results.vue";
+
 import Sections from "./components/Body/Sections.vue";
 import LoadingIndicator from "./components/Utilities/LoadingIndicator.vue";
 import Section from "./Models/Section.js";
@@ -44,6 +47,7 @@ export default {
     Outro,
     LoadingIndicator,
     Sections,
+    Results,
   },
   mounted() {
     fetch(payloadUrl)

@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col lg:grid grid-cols-6 gap-4 items-center bg-gray-50 rounded-sm -mx-2 p-2"
+    class="flex flex-col lg:grid grid-cols-8 gap-4 items-center bg-gray-50 rounded-sm -mx-2 p-2"
   >
-    <div class="lg:col-span-3 w-full">
+    <div class="lg:col-span-4 w-full">
       <label class="font-semibold" :for="uid">{{ question.name }}</label>
 
       <ul class="text-sm font-light flex flex-col md:flex-row">
@@ -10,7 +10,10 @@
           {{
             $root.strings.__("impact_per_unit", {
               unit: $root.strings.formatNumber(question.step, question.unit_style),
-              impact: $root.strings.formatNumber(question.impactPerUnit, "currency"),
+              impact: $root.strings.formatNumber(
+                question.impactPerUnit / 1000000.0,
+                "currency"
+              ),
             })
           }}
         </li>
@@ -51,19 +54,25 @@
       </p>
     </div>
 
-    <div class="lg:col-span-2 w-full print:hidden">
+    <div class="lg:col-span-3 w-full print:hidden">
       <question-range :uid="uid" :question="question"></question-range>
     </div>
 
-    <div class="text-center">
+    <div
+      class="text-center"
+      :class="{ hidden: !question.isAltered, 'lg:block': !question.isAltered }"
+    >
       <span
         class="bordered text-white print:text-black font-semibold text-sm px-1 py-.5 rounded-sm"
         :class="{
-          'bg-red-800': question.isAltered < 0,
-          'bg-green-800': question.isAltered > 0,
+          'bg-red-800': question.userValueImpact < 0,
+          'bg-green-800': question.userValueImpact > 0,
           'bg-gray-500': !question.isAltered,
         }"
-        >{{ question.user_value }}</span
+        ><span v-if="question.isAltered">{{
+          $root.strings.formatNumber(question.userValueImpact / 1000000.0, "currency")
+        }}</span
+        ><span v-else>0</span></span
       >
     </div>
   </div>
