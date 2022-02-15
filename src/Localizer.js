@@ -32,7 +32,7 @@ export default class Localizer {
         const locale = `${this.language}-CA`;
         switch (style) {
             case 'currency':
-                return new Intl.NumberFormat(locale, { style: 'currency',"currency": "CAD", maximumFractionDigits:0}).format(number);
+                return new Intl.NumberFormat(locale, { style: 'currency',"currency": "CAD", maximumFractionDigits:2}).format(number);
             case 'percent':
                 return new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits:2}).format(number/100);
         }

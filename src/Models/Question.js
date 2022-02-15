@@ -16,4 +16,8 @@ export default class Question {
         if (this.user_value == this.default_value) return 0;
         return this.user_value > this.default_value ? 1 : -1;
     }
+
+    get impactPerUnit() {
+        return (Math.abs(this.unit_value_down) + Math.abs(this.unit_value_up)) / 2 * this.step / 1000000.0;
+    }
 }

@@ -18,5 +18,13 @@
     "impact_in_millions": {
         "en":"All revenue impacts in millions",
         "fr":"L'incidence sur les recettes est exprimée en millions de dollars"
+    },
+    "selected_value": {
+        "en":"Selected Value:",
+        "fr":"Valeur sélectionnée :"
+    },
+    "impact_per_unit": {
+        "en":"Impact per :unit change: :impact",
+        "fr":"Impact par variation de :unit : :impact"
     }
 }
