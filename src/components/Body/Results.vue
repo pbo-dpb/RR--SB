@@ -1,8 +1,8 @@
 <template>
-  <main class="flex flex-col gap-8">
+  <main class="flex flex-col gap-8 sticky bottom-0 w-full left-0">
     <div
       v-if="balance"
-      class="text-white w-full prose max-w-none p-4 text-center rounded"
+      class="text-white w-full prose max-w-none p-2 text-center rounded mb-2 leading-tight"
       :class="{ 'bg-green-800': balance > 0, 'bg-red-800': balance < 0 }"
       v-html="fullTextTotal"
     ></div>
