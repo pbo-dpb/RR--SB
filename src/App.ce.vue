@@ -9,10 +9,13 @@
       class="w-8 h-8 mb-8"
     ></loading-indicator>
     <template v-else>
-      <div class="flex flex-col gap-8 mb-8">
-        <Meta></Meta>
-        <Sections></Sections>
-        <Results></Results>
+      <Meta></Meta>
+      <div class="flex flex-col lg:grid lg:grid-cols-4 gap-8 my-8">
+        <div class="col-span-3 flex flex-col gap-8">
+          <Sections></Sections>
+          <Results></Results>
+        </div>
+        <div class="lg:border-l border-gray-100 lg:pl-8">Sidebar</div>
       </div>
     </template>
   </div>
