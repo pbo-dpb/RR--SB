@@ -14,7 +14,7 @@
         <div class="col-span-3 flex flex-col gap-8">
           <Sections></Sections>
         </div>
-        <div class="hidden lg:block lg:border-l border-gray-100 lg:pl-8">
+        <div class="lg:border-l border-gray-100 lg:pl-8">
           <Sidebar></Sidebar>
         </div>
       </section>
