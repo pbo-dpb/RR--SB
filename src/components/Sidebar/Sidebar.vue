@@ -42,6 +42,7 @@ export default {
      
 
       const prHtml = document.createElement("html");
+      prHtml.insertAdjacentHTML('afterbegin', '<head><meta charset="UTF-8" /></head>')
       const prBody = document.createElement("body");
       prHtml.appendChild(prBody);
 
@@ -73,7 +74,7 @@ export default {
       container.insertAdjacentHTML('beforeend', `<div class='mt-8 text-center font-semibold'>${this.$root.fullTextTotal}</div>`);
       
       const winUrl = URL.createObjectURL(
-      new Blob([prHtml.outerHTML], { type: "text/html" }));
+      new Blob([`<!DOCTYPE html>`, prHtml.outerHTML], { type: "text/html" }));
       const printWindow = window.open(winUrl, "Print-Window", `width=800,height=400,screenX=200,screenY=200`);
       printWindow.onload = ()=>{
           setTimeout(() => {printWindow.print()}, 500);
