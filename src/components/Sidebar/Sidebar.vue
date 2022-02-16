@@ -18,7 +18,7 @@
   </sidebar-kv>
   </div>
 
-  <button class="mt-4 text-sm font-semibold border border-blue-800 text-blue-800 rounded px-4 py-1 w-full hover:bg-blue-100" @click="triggerPrint">{{ $root.strings.print }}</button>
+  <button class="hidden lg:block mt-4 text-sm font-semibold border border-blue-800 text-blue-800 rounded px-4 py-1 w-full hover:bg-blue-100" @click="triggerPrint">{{ $root.strings.print }}</button>
 
 </div>
 
@@ -75,7 +75,10 @@ export default {
       const winUrl = URL.createObjectURL(
       new Blob([prHtml.outerHTML], { type: "text/html" }));
       const printWindow = window.open(winUrl, "Print-Window", `width=800,height=400,screenX=200,screenY=200`);
-      printWindow.onload = ()=>{printWindow.print()};
+      printWindow.onload = ()=>{
+          setTimeout(() => {printWindow.print()}, 500);
+          
+        };
     }
   }
 };

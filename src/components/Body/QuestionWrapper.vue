@@ -5,7 +5,7 @@
     <div class="lg:col-span-4 w-full">
       <label class="font-semibold" :for="uid">{{ question.name }}</label>
 
-      <ul class="text-sm font-light flex flex-col md:flex-row">
+      <ul class="font-light flex flex-col">
         <li>
           {{
             $root.strings.__("impact_per_unit", {
@@ -18,13 +18,6 @@
           }}
         </li>
 
-        <li
-          class="hidden md:block text-gray-500 mx-2"
-          aria-hidden="true"
-          role="separator"
-        >
-          •
-        </li>
 
         <li>
           {{ $root.strings.selected_value }}
@@ -37,7 +30,7 @@
             }}</span
           ><span
             :class="{
-              'text-red-600': question.isAltered,
+              'text-orange-600': question.isAltered,
             }"
             >{{
               $root.strings.formatNumber(question.user_value, question.unit_style)
