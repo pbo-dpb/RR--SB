@@ -38,5 +38,9 @@
     "sidebar_total_impact": {
         "en": "Total impact",
         "fr": "Impact total"
+    },
+    "print": {
+        "en": "Print PDF",
+        "fr": "Imprimer le PDF"
     }
 }

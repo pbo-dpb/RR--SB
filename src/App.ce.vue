@@ -36,6 +36,8 @@ import Sidebar from "./components/Sidebar/Sidebar.vue";
 import Sections from "./components/Body/Sections.vue";
 import LoadingIndicator from "./components/Utilities/LoadingIndicator.vue";
 import Section from "./Models/Section.js";
+import { Remarkable } from "remarkable";
+
 
 const language = document.documentElement.lang;
 
@@ -77,6 +79,23 @@ export default {
     },
     percentageOfTotalRevenue() {
       return (this.balance * 100) / this.payload.total_revenue;
+    },
+
+    absoluteBalance() {
+      return Math.abs(this.balance) / 1000000;
+    },
+    
+    fullTextTotal() {
+      const md = new Remarkable();
+      return md.render(
+        this.strings.__(this.balance > 0 ? "total_increase" : "total_decrease", {
+          absbalance: this.strings.formatNumber(this.absoluteBalance, "currency"),
+          percent: this.strings.formatNumber(
+            Math.abs(this.percentageOfTotalRevenue),
+            "percent"
+          ),
+        })
+      );
     },
   }
 };
