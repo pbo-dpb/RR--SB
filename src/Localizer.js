@@ -5,7 +5,9 @@ import outroEn from "./assets/outro_en.md?raw";
 import outroFr from "./assets/outro_fr.md?raw";
 
 export default class Localizer {
-    constructor(language) {
+    constructor() {
+        this.language = this.constructor.appLanguage;
+
         let strings = JSON.parse(rawStrings);
 
         // Assign blurbs to strings. We split them to separate files to make updating them easier.
@@ -15,9 +17,8 @@ export default class Localizer {
         strings.outro.fr = outroFr;
         
         for (const [key, value] of Object.entries(strings)) {
-            this[key] = value[language]
+            this[key] = value[this.language]
         }
-        this.language = language;
     }
 
     __(key, replace={}) {
@@ -38,5 +39,16 @@ export default class Localizer {
         }
         
         return style.replaceAll(':value', (new Intl.NumberFormat(locale).format(number))); 
+    }
+
+    static get appLanguage() {
+        const url = new URL(window.location.href);
+let language;
+if(url.searchParams && ['fr', 'en'].includes(url.searchParams.get('lang')))
+  language = url.searchParams.get('lang');
+else
+  language = document.documentElement.lang;
+
+  return language;
     }
 }

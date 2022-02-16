@@ -1,6 +1,8 @@
+import Localizer from "../Localizer";
+
 export default class Question {
     constructor(o) {
-        const language = document.documentElement.lang;
+        const language = Localizer.appLanguage;
         this.name = o[`name_${language}`];
         this.description = o[`description_${language}`];
         this.unit_name = o[`unit_name_${language}`];

@@ -39,13 +39,12 @@ import Section from "./Models/Section.js";
 import { Remarkable } from "remarkable";
 
 
-const language = document.documentElement.lang;
+
 
 export default {
   data() {
     return {
-      language: language,
-      strings: new Localizer(language),
+      strings: new Localizer(),
       payload: null,
     };
   },
@@ -67,6 +66,9 @@ export default {
       });
   },
   computed: {
+    language() {
+      return this.strings.language;
+    },
     balance() {
       return this.payload.sections.reduce((scarry, section) => {
         return (
