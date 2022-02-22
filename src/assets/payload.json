@@ -1,5 +1,5 @@
 {
-    "total_revenue":340200000000,
+    "total_revenue": 340200000000,
     "last_update": "2021/08/01",
     "sections": [
         {
@@ -18,7 +18,7 @@
                     "unit_value_up": 4696014294,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 13.0,
                     "maximum": 17.0,
                     "step": 0.25
@@ -33,7 +33,7 @@
                     "unit_value_up": 3066295911,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 18.5,
                     "maximum": 22.5,
                     "step": 0.25
@@ -48,7 +48,7 @@
                     "unit_value_up": 864569213,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 24.0,
                     "maximum": 28.0,
                     "step": 0.25
@@ -63,7 +63,7 @@
                     "unit_value_up": 290774448,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 27.0,
                     "maximum": 31.0,
                     "step": 0.25
@@ -78,7 +78,7 @@
                     "unit_value_up": 372801274,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-    "unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 31.0,
                     "maximum": 35.0,
                     "step": 0.25
@@ -101,7 +101,7 @@
                     "unit_value_up": -637734,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 30412.0,
                     "maximum": 70412.0,
                     "step": 2500.0
@@ -116,7 +116,7 @@
                     "unit_value_up": -166017,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 80824.0,
                     "maximum": 120824.0,
                     "step": 2500.0
@@ -169,7 +169,7 @@
                     "unit_value_up": -3340584,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 10398.0,
                     "maximum": 14398.0,
                     "step": 250.0
@@ -184,7 +184,7 @@
                     "unit_value_up": -300080,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 10398.0,
                     "maximum": 14398.0,
                     "step": 250.0
@@ -207,7 +207,7 @@
                     "unit_value_up": 8500238953,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 3.0,
                     "maximum": 7.0,
                     "step": 0.25
@@ -230,7 +230,7 @@
                     "unit_value_up": -15687767,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 107.0,
                     "maximum": 507.0,
                     "step": 50.0
@@ -245,7 +245,7 @@
                     "unit_value_up": -8913078,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 61.0,
                     "maximum": 261.0,
                     "step": 25.0
@@ -260,7 +260,7 @@
                     "unit_value_up": -118301,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 34997.0,
                     "maximum": 44997.0,
                     "step": 1000.0
@@ -283,7 +283,7 @@
                     "unit_value_up": -6874432,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": -250.0,
                     "maximum": 250.0,
                     "step": 50.0
@@ -298,7 +298,7 @@
                     "unit_value_up": -222851,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": -10000.0,
                     "maximum": 10000.0,
                     "step": 1000.0
@@ -313,7 +313,7 @@
                     "unit_value_up": -1890198963,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": -1.0,
                     "maximum": 1.0,
                     "step": 0.25
@@ -336,7 +336,7 @@
                     "unit_value_up": 375540000,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 25.0,
                     "maximum": 75.0,
                     "step": 5.0
@@ -359,7 +359,7 @@
                     "unit_value_up": 121938300,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 25.5,
                     "maximum": 33.5,
                     "step": 1.0
@@ -382,7 +382,7 @@
                     "unit_value_up": 8016562,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": -4.0,
                     "maximum": 4.0,
                     "step": 0.5
@@ -397,7 +397,7 @@
                     "unit_value_up": 685470,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": -4.0,
                     "maximum": 4.0,
                     "step": 0.5
@@ -412,7 +412,7 @@
                     "unit_value_up": 6886646,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": -4.0,
                     "maximum": 4.0,
                     "step": 0.5
@@ -427,7 +427,7 @@
                     "unit_value_up": 3242820,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": -4.0,
                     "maximum": 4.0,
                     "step": 0.5
@@ -450,7 +450,7 @@
                     "unit_value_up": 1556610044,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 10,
                     "maximum": 20,
                     "step": 1.0
@@ -465,7 +465,7 @@
                     "unit_value_up": 420490356,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 6.0,
                     "maximum": 12.0,
                     "step": 1.0
@@ -480,7 +480,7 @@
                     "unit_value_up": 2575,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "currency",
+                    "unit_style": "currency",
                     "minimum": 400000.0,
                     "maximum": 600000.0,
                     "step": 100000.0
@@ -495,7 +495,7 @@
                     "unit_value_up": 236121539,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-"unit_style": "percent",
+                    "unit_style": "percent",
                     "minimum": 13.0,
                     "maximum": 17.0,
                     "step": 1.0
