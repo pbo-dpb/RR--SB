@@ -28,12 +28,12 @@
         "fr":"Impact par variation de :unit : :impact"
     },
     "total_increase": {
-        "en": "Your changes would *increase* revenues by :absbalance million, or :percent of total revenues.",
-        "fr": "Vos modifications *augmenteraient* les revenus de :absbalance millions de dollars, ou :percent des recettes totales."
+        "en": "Your changes would *increase revenues* by :absbalance million, or :percent of total revenues.",
+        "fr": "Vos modifications *augmenteraient les revenus* de :absbalance millions de dollars, ou :percent des recettes totales."
     },
     "total_decrease": {
-        "en": "Your changes would *decrease* revenues by :absbalance million, or :percent of total revenues.",
-        "fr": "Vos modifications *réduiraient* les revenus de :absbalance millions de dollars, ou :percent des recettes totales."
+        "en": "Your changes would *increase expenses* by :absbalance million, or :percent of total revenues.",
+        "fr": "Vos modifications *augmenteraient les dépenses* de :absbalance millions de dollars, ou :percent des recettes totales."
     },
     "sidebar_total_impact": {
         "en": "Total impact",
