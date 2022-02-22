@@ -14,7 +14,7 @@
   
   <sidebar-kv>
   <template v-slot:key>{{ $root.strings.sidebar_total_impact }}</template>
-  <template v-slot:value>{{ $root.strings.formatNumber($root.balance/1000000, "currency") }}</template>
+  <template v-slot:value>{{ $root.strings.formatNumber($root.strings.roundCurrency($root.balance/1000000), "currency") }}</template>
   </sidebar-kv>
   </div>
 

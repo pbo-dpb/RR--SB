@@ -10,7 +10,7 @@
             }}</div>
       </template>
       <template v-slot:value>
-      {{ $root.strings.formatNumber(question.userValueImpact / 1000000.0, "currency") }}
+      {{ $root.strings.formatNumber($root.strings.roundCurrency(question.userValueImpact / 1000000.0), "currency") }}
       </template>     
     </sidebar-kv>
   </ul>

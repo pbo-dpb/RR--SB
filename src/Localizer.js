@@ -29,7 +29,15 @@ export default class Localizer {
         return s;
     }
 
-    roundCurrency(number, precision) {
+    /**
+     * Formats a number with a specified number of significant digits.
+     *
+     * @param {Float} number A number
+     * @param {Float} precision The number of significant digits
+     * @return {String} Returns the number with a specified number of significant digits
+     * @see https://github.com/pbo-dpb/readyreckoner.ca/blob/e237358123a46ea3583376eb55c0cfc0bbe2bc39/app/assets/javascripts/application.js#L45-L49
+     */
+    roundCurrency(number, precision=2) {
         var digits = number ? Math.floor(Math.log(Math.abs(number)) / Math.log(10) + 1) : 1
           , multiplier = Math.pow(10, digits - precision);
         return Math.round(number / multiplier) * multiplier;

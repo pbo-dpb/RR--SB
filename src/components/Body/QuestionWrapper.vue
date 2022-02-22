@@ -63,7 +63,7 @@
           'bg-gray-500': !question.isAltered,
         }"
         ><span v-if="question.isAltered">{{
-          $root.strings.formatNumber(question.userValueImpact / 1000000.0, "currency")
+          $root.strings.formatNumber($root.strings.roundCurrency(question.userValueImpact / 1000000.0), "currency")
         }}</span
         ><span v-else>0</span></span
       >
