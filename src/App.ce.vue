@@ -91,7 +91,7 @@ export default {
       const md = new Remarkable();
       return md.render(
         this.strings.__(this.balance > 0 ? "total_increase" : "total_decrease", {
-          absbalance: this.strings.formatNumber(this.absoluteBalance, "currency"),
+          absbalance: this.strings.formatNumber(this.strings.roundCurrency(this.absoluteBalance, 2), "currency"),
           percent: this.strings.formatNumber(
             Math.abs(this.percentageOfTotalRevenue),
             "percent"

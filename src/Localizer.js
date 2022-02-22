@@ -29,11 +29,17 @@ export default class Localizer {
         return s;
     }
 
+    roundCurrency(number, precision) {
+        var digits = number ? Math.floor(Math.log(Math.abs(number)) / Math.log(10) + 1) : 1
+          , multiplier = Math.pow(10, digits - precision);
+        return Math.round(number / multiplier) * multiplier;
+      }
+
     formatNumber(number, style=":value") {
         const locale = `${this.language}-CA`;
         switch (style) {
             case 'currency':
-                return new Intl.NumberFormat(locale, { style: 'currency',"currency": "CAD", maximumFractionDigits:2}).format(number);
+                return new Intl.NumberFormat(locale, { style: 'currency',"currency": "CAD", maximumFractionDigits:0}).format(number);
             case 'percent':
                 return new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits:2}).format(number/100);
         }
