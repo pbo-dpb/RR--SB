@@ -5,7 +5,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=typography,line-clamp"></script>
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RR2</title>
+    <title>RR-SB</title>
   </head>
   <body class="bg-gray-100">
     <main class="bg-white container mt-8 p-8 border border-t border-gray-100 mx-auto">
@@ -29,20 +29,23 @@ if(url.searchParams && ['fr', 'en'].includes(url.searchParams.get('lang')))
 else
   language = 'en'
 
-
+let title;
 if (language === 'fr') {
-  document.getElementById('tool-name').innerText = "Simulateur budgétaire";
+  title = "Simulateur budgétaire";
   document.getElementById('alt-language-link').innerText = "English";
   document.getElementById('alt-language-link').setAttribute('href', '?lang=en')
   document.getElementById('pbo-logo').setAttribute('alt', 'BDPB');
   document.getElementById('pbo-logo').setAttribute('src', 'https://www2.pbo-dpb.ca/cms/svg/logo.full.fr.svg');
+  
 }  else {
-  document.getElementById('tool-name').innerText = "Ready Reckoner";
+  title ="Ready Reckoner";
   document.getElementById('alt-language-link').innerText = "Français";
   document.getElementById('alt-language-link').setAttribute('href', '?lang=fr')
   document.getElementById('pbo-logo').setAttribute('alt', 'OPBO');
   document.getElementById('pbo-logo').setAttribute('src', 'https://www2.pbo-dpb.ca/cms/svg/logo.full.en.svg');
 }
+document.getElementById('tool-name').innerText = title;
+document.title = title;
     </script>
   </body>
 </html>
