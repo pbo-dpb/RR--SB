@@ -313,7 +313,7 @@
                     "unit_value_up": -1756465555,
                     "unit_name_en": null,
                     "unit_name_fr": null,
-                    "unit_style": "currency",
+                    "unit_style": "percent",
                     "minimum": -1.0,
                     "maximum": 1.0,
                     "step": 0.25
