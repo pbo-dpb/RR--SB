@@ -10,8 +10,8 @@
           {{
             $root.strings.__("impact_per_unit", {
               unit: $root.strings.formatNumber(question.step, question.unit_style),
-              impact: $root.strings.formatNumber(
-                question.impactPerUnit / 1000000.0,
+              impact:  $root.strings.formatNumber(
+                $root.strings.roundCurrency(question.impactPerUnit / 1000000.0),
                 "currency"
               ),
             })
