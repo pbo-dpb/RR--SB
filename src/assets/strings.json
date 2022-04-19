@@ -42,5 +42,21 @@
     "print": {
         "en": "Print PDF",
         "fr": "Imprimer le PDF"
+    },
+    "user_guide_cta_title": {
+        "en": "Learn more about this tool",
+        "fr" : "En savoir plus sur cet outil"
+    },
+    "user_guide_cta_button": {
+        "en": "Open the User Guide",
+        "fr" : "Ouvrir le guide d'utilisation"
+    },
+    "user_guide_close_button": {
+        "en": "Close the User Guide",
+        "fr" : "Fermer le Guide d'utilisation"
+    },
+    "user_guide_title": {
+        "en": "User Guide",
+        "fr" : "Guide d'utilisation"
     }
 }

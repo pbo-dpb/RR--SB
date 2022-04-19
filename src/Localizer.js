@@ -4,8 +4,8 @@ import introFr from "./assets/intro_fr.md?raw";
 import outroEn from "./assets/outro_en.md?raw";
 import outroFr from "./assets/outro_fr.md?raw";
 
-import changeLogEn from "../readme.md?raw";
-import changeLogFr from "../readme.fr.md?raw";
+import readmeEn from "../readme.md?raw";
+import readmeFr from "../readme.fr.md?raw";
 
 
 export default class Localizer {
@@ -24,7 +24,7 @@ export default class Localizer {
             this[key] = value[this.language]
         }
 
-        this.changelog = this.language === 'fr' ? changeLogFr : changeLogEn;
+        this.readme = this.language === 'fr' ? readmeFr : readmeEn;
     }
 
     __(key, replace={}) {

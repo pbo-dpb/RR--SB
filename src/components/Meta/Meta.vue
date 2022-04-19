@@ -13,9 +13,17 @@
       {{ $root.strings.impact_in_millions }}
     </li>
   </ul>
+
+  <div class="md:hidden">
+<sidebar-guide></sidebar-guide>
+</div>
 </template>
 <script>
+import SidebarGuide from "../Sidebar/SidebarGuide.vue";
 export default {
+  components: {
+    SidebarGuide
+  },
   computed: {
     localizedLastUpdate() {
       let lastUpdate = new Date(`${this.$root.payload.last_update} 00:00`);

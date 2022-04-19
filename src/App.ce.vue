@@ -1,4 +1,5 @@
 <template>
+<main  v-if="!$root.renderUserGuide">
   <div class="mb-8">
     <Intro></Intro>
   </div>
@@ -13,6 +14,7 @@
       <section class="flex flex-col lg:grid lg:grid-cols-4 gap-8 my-8">
         <div class="col-span-3 flex flex-col gap-8">
           <Sections></Sections>
+          
         </div>
         <div class="lg:border-l border-gray-100 lg:pl-8">
           <Sidebar></Sidebar>
@@ -22,6 +24,10 @@
     </template>
   </div>
   <Outro></Outro>
+  </main>
+
+  <UserGuide v-else></UserGuide>
+
 </template>
 
 <script>
@@ -37,6 +43,8 @@ import Sections from "./components/Body/Sections.vue";
 import LoadingIndicator from "./components/Utilities/LoadingIndicator.vue";
 import Section from "./Models/Section.js";
 import { Remarkable } from "remarkable";
+import { findDir } from "@vue/compiler-core";
+import UserGuide from "./components/Meta/UserGuide.vue";
 
 
 
@@ -46,6 +54,7 @@ export default {
     return {
       strings: new Localizer(),
       payload: null,
+      renderUserGuide: false
     };
   },
   components: {
@@ -56,7 +65,8 @@ export default {
     Sections,
     Results,
     Sidebar,
-  },
+    UserGuide
+},
   mounted() {
     fetch(payloadUrl)
       .then((r) => r.json())

@@ -1,8 +1,9 @@
 <template>
 <aside class="flex flex-col-reverse lg:flex-col gap-8">
 
-<sidebar-report></sidebar-report>
-
+<div class="md:block">
+<sidebar-guide></sidebar-guide>
+</div>
 <div v-if="$root.balance">
 
   <div ref="printable">
@@ -28,13 +29,13 @@
 <script>
 import SectionRecap from "./SectionRecap.vue";
 import SidebarKv from "./SidebarKv.vue";
-import SidebarReport from "./SidebarReport.vue";
+import SidebarGuide from "./SidebarGuide.vue";
 
 export default {
   components: {
     SectionRecap,
     SidebarKv,
-    SidebarReport,
+    SidebarGuide,
   },
   computed: {},
   methods: {
