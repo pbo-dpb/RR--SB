@@ -4,8 +4,8 @@ import introFr from "./assets/intro_fr.md?raw";
 import outroEn from "./assets/outro_en.md?raw";
 import outroFr from "./assets/outro_fr.md?raw";
 
-import changeLogEn from "../CHANGELOG.en.md?raw";
-import changeLogFr from "../CHANGELOG.en.md?raw";
+import changeLogEn from "../readme.md?raw";
+import changeLogFr from "../readme.fr.md?raw";
 
 
 export default class Localizer {

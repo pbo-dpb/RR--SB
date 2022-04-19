@@ -12,5 +12,9 @@ export default defineConfig({
     rollupOptions: {
       input: ['./src/main.js'],
     },
+  },
+  server: {
+    port: '8080'
   }
+
 })
