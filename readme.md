@@ -1,35 +1,10 @@
-The Parliamentary Budget Officer (PBO) supports Parliament by providing economic and financial analysis for the purposes of raising the quality of parliamentary debate and promoting greater budget transparency and accountability.
-
-The PBO’s Ready Reckoner is an online tool to estimate the potential impacts on federal budgetary revenues that would arise from adjusting various federal tax rates, credits, and brackets. This is a brief guide to assist users with technical questions.
-
-**Lead Analyst**
-- Govindadeva Bernier, Advisor-Analyst
-
-**Contributors**
-- Katarina Michalyshyn, Analyst
-- Tim Scholz, Advisor-Analyst
-
-**Prepared under the direction of**
-- Kristina Grinshpoon, Acting Director
-
-**Web Developer**
-- Rémy Vanherweghem, Digital Communications Analyst
-
-*Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of this user guide.*
-
-For further information, please contact [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca).
-
----
-
-# Ready Reckoner User Guide
-
 The Parliamentary Budget Officer (PBO) frequently receives requests pertaining to the potential revenue impacts arising from adjustments to the federal tax system.[^1] In response to these requests, the PBO has developed an online tool to estimate the potential impacts on federal budgetary revenues that would arise from adjusting various federal tax rates, credits, and brackets.[^2] Ready Reckoner estimates should be considered stylized rules of thumb.[^3]
 
-## Reference year
+### Reference year
 
 The 2022 calendar year is the reference year for all estimates.
 
-## Models Used
+### Models Used
 
 - The estimates for Marginal Tax Rates, Tax Brackets, Basic Personal and Spousal Amounts, Goods and Services Tax (GST), GST Credit for a Family of Four, and the Canada Child Benefit (CCB) were developed using the Statistics Canada Social Policy Simulation Database and Model (SPSD/M v. 29.0).[^4]
 - The estimate for the Capital Gains Inclusion Rate was developed using both SPSD/M v.29.0 and the PBO’s Corporate Tax Model.[^5]
@@ -37,7 +12,7 @@ The 2022 calendar year is the reference year for all estimates.
 - Estimates shown under the Corporate Income Taxes (CIT) section were developed using the PBO’s Corporate Tax Model. Simulations were performed on 2018 tax data using 2022 tax parameters and the results were scaled up to 2022 based on our March 2022 Economic and Fiscal Outlook projection of CIT revenue.[^7] For the General Corporate Rate and the Small Business Rate, SPSD/M v.29.0 was used to adjust the dividend gross-up rate and the federal dividend tax credit rate for personal income taxes (PIT).
 - The estimates in the Ready Reckoner are in line with our March 2022 Economic and Fiscal Outlook.
 
-## Static or Behavioural Estimate
+### Static or Behavioural Estimate
 
 - The estimates for Marginal Tax Rates and Tax Bracket Thresholds include a behavioural effect.
   - The assumed elasticity of taxable income (ETI) is 0.1 for all but the top bracket of taxable income. PBO assumes an elasticity of 0.38 for the top bracket.[^8] To illustrate, this means that a 10 per cent increase in the net of tax rate (that is, 1 minus the marginal tax rate) results in a 1 per cent increase in taxable income for individuals in all but the top bracket, as compared to a 3.8 per cent increase in taxable income for individuals in the top bracket.[^9]
@@ -46,7 +21,7 @@ The 2022 calendar year is the reference year for all estimates.
   - We assume a price-elasticity of -1.23 for spirts and -0.28 for wine. That means a 10 per cent increase in spirt and wine prices would lead to a 12.3 per cent and 2.8 per cent reduction in spirit and wine consumption, respectively.
 - All other estimates not mentioned above are static estimates:  Basic Personal and Spousal Amounts; GST; GST Credit for a Family of Four; CCB; Capital Gains Inclusion Rate; and CIT.[^10]
 
-## Interaction Effects
+### Interaction Effects
 
 - Any tax measures that are linked to the PIT bracket thresholds in legislation will be included when changing the PIT bracket thresholds. For example, the Basic Personal Amount (BPA) phase out rate is calculated using the fourth and fifth PIT bracket thresholds, therefore increasing the bracket thresholds will consequently result in a change in the BPA.
 - Consistent with current legislation, when changing the first tax bracket rate, we assume a corresponding rate change for all federal non-refundable tax credits. 
@@ -69,3 +44,22 @@ The 2022 calendar year is the reference year for all estimates.
 [^10]: PBO did not include a behavioural response to changes in the BPA. PBO anticipates the behavioural response to be non-zero, but immaterial.
 [^11]: The revenue impact of a change in the Spousal/Equivalent to Spousal Amount represents about 8% of the total revenue impact of changing the combined BPA/SPA.
 [^12]: The tax system contains many linkages between the personal and corporate income tax systems to ensure that an individual is indifferent between earning income through a corporation or directly. This concept is generally referred to as "tax integration".
+
+---
+
+### Lead Analyst
+- Govindadeva Bernier, Advisor-Analyst
+
+### Contributors
+- Katarina Michalyshyn, Analyst
+- Tim Scholz, Advisor-Analyst
+
+### Prepared under the direction of
+- Kristina Grinshpoon, Acting Director
+
+### Web Developer
+- Rémy Vanherweghem, Digital Communications Analyst
+
+*Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of this user guide.*
+
+For further information, please contact [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca).
