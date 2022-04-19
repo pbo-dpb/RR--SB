@@ -1,6 +1,6 @@
 <template>
 
-<button @click="$root.renderUserGuide=true" class="w-full bg-gradient-to-br from-blue-200 to-blue-400 p-4 flex flex-col items-center text-white gap-4 justify-center rounded-xl">
+<button @click="$root.renderUserGuide=true" class="w-full bg-gradient-to-br from-blue-200 to-blue-500 p-4 flex flex-col items-center text-white gap-4 justify-center rounded-xl">
 
 <sidebar-guide-icon></sidebar-guide-icon>
 

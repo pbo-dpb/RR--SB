@@ -44,23 +44,3 @@ L’année civile 2022 est l’année de référence pour toutes les estimations
 [^10]: Le DPB n’a pas inclus de réponse comportementale quant aux changements du montant personnel de base. Il prévoit que la réponse comportementale ne sera pas nulle, mais sans importance. 
 [^11]: L’impact sur les recettes fiscales d’un changement au montant pour époux ou conjoint de fait équivaut à environ 8 % de l’impact total d’un changement des MPB/MPE combinés. 
 [^12]: Le système fiscal comprend de nombreux liens entre les systèmes de l’impôt sur le revenu des particuliers et des sociétés, et ce, afin de garantir que la situation est la même pour une personne, que le revenu soit gagné par l’intermédiaire d’une société ou directement. Ce concept est généralement appelé « intégration fiscale ».
-
----
-
-
-### Analyste principal
-- Govindadeva Bernier, conseiller-analyste
-
-### Collaborateurs
-- Katarina Michalyshyn, analyste
-- Tim Scholz, conseiller-analyste
-
-### Préparé sous la direction de
-- Kristina Grinshpoon, directrice par intérim
-
-### Développement Web
-- Rémy Vanherweghem, analyste en communications numériques
-
-*Nancy Beauchamp et Marie-Ève Hamel Laberge ont participé à la préparation de ce guide d'utilisation.*
-
-Pour de plus amples renseignements, veuillez communiquer avec le DPB à l’adresse suivante : [dpb-pbo@parl.gc.ca](mailto:dpb-pbo@parl.gc.ca). 

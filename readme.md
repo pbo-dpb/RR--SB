@@ -44,22 +44,3 @@ The 2022 calendar year is the reference year for all estimates.
 [^10]: PBO did not include a behavioural response to changes in the BPA. PBO anticipates the behavioural response to be non-zero, but immaterial.
 [^11]: The revenue impact of a change in the Spousal/Equivalent to Spousal Amount represents about 8% of the total revenue impact of changing the combined BPA/SPA.
 [^12]: The tax system contains many linkages between the personal and corporate income tax systems to ensure that an individual is indifferent between earning income through a corporation or directly. This concept is generally referred to as "tax integration".
-
----
-
-### Lead Analyst
-- Govindadeva Bernier, Advisor-Analyst
-
-### Contributors
-- Katarina Michalyshyn, Analyst
-- Tim Scholz, Advisor-Analyst
-
-### Prepared under the direction of
-- Kristina Grinshpoon, Acting Director
-
-### Web Developer
-- Rémy Vanherweghem, Digital Communications Analyst
-
-*Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of this user guide.*
-
-For further information, please contact [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca).

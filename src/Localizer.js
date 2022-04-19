@@ -7,6 +7,8 @@ import outroFr from "./assets/outro_fr.md?raw";
 import readmeEn from "../readme.md?raw";
 import readmeFr from "../readme.fr.md?raw";
 
+import authorsEn from "../authors.md?raw";
+import authorsFr from "../authors.fr.md?raw";
 
 export default class Localizer {
     constructor() {
@@ -25,6 +27,7 @@ export default class Localizer {
         }
 
         this.readme = this.language === 'fr' ? readmeFr : readmeEn;
+        this.authors = this.language === 'fr' ? authorsFr : authorsEn;
     }
 
     __(key, replace={}) {
