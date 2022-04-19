@@ -4,6 +4,10 @@ import introFr from "./assets/intro_fr.md?raw";
 import outroEn from "./assets/outro_en.md?raw";
 import outroFr from "./assets/outro_fr.md?raw";
 
+import changeLogEn from "../CHANGELOG.en.md?raw";
+import changeLogFr from "../CHANGELOG.en.md?raw";
+
+
 export default class Localizer {
     constructor() {
         this.language = this.constructor.appLanguage;
@@ -19,6 +23,8 @@ export default class Localizer {
         for (const [key, value] of Object.entries(strings)) {
             this[key] = value[this.language]
         }
+
+        this.changelog = this.language === 'fr' ? changeLogFr : changeLogEn;
     }
 
     __(key, replace={}) {

@@ -2,8 +2,6 @@ The Parliamentary Budget Officer (PBO) supports Parliament by providing economic
 
 The PBO’s Ready Reckoner is an online tool to estimate the potential impacts on federal budgetary revenues that would arise from adjusting various federal tax rates, credits, and brackets. This is a brief guide to assist users with technical questions.
 
-## Credits
-
 **Lead Analyst**
 - Govindadeva Bernier, Advisor-Analyst
 
@@ -17,7 +15,7 @@ The PBO’s Ready Reckoner is an online tool to estimate the potential impacts o
 **Developer**
 - Rémy Vanherweghem, Digital Communications Analyst
 
-*Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of the report for publication.*
+*Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of this user guide.*
 
 ---
 
