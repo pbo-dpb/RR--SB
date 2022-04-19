@@ -12,10 +12,12 @@ The PBO’s Ready Reckoner is an online tool to estimate the potential impacts o
 **Prepared under the direction of**
 - Kristina Grinshpoon, Acting Director
 
-**Developer**
+**Web Developer**
 - Rémy Vanherweghem, Digital Communications Analyst
 
 *Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of this user guide.*
+
+For further information, please contact [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca).
 
 ---
 
