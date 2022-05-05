@@ -18,6 +18,6 @@ Le Simulateur budgétaire du DPB est un outil en ligne qui permet d’estimer le
 
 ## Contact
 
-- [Bureau du directeur parlementaire du budget ](https://www.pbo-dpb.gc.ca) 
+- [Bureau du directeur parlementaire du budget ](https://www.pbo-dpb.ca) 
 - +1-613-992-8026
 - [dpb-pbo@parl.gc.ca](mailto:dpb-pbo@parl.gc.ca)

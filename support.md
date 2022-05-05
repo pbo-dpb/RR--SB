@@ -17,6 +17,6 @@ The PBO’s Ready Reckoner is an online tool to estimate the potential impacts o
 
 ## Contact
 
-- [Office of the Parliamentary Budget Officer](https://www.pbo-dpb.gc.ca) 
+- [Office of the Parliamentary Budget Officer](https://www.pbo-dpb.ca) 
 - +1-613-992-8026
 - [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca)
