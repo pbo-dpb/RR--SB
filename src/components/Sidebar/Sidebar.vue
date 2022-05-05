@@ -60,7 +60,7 @@ export default {
 
       header.setAttribute('class', 'flex flex-col items-center gap-2 mb-8');
       const logoTag = document.createElement('img');
-      logoTag.setAttribute('src', `https://www2.pbo-dpb.ca/cms/svg/logo.full.${this.$root.language}.svg`);
+      logoTag.setAttribute('src', `https://www.pbo-dpb.ca/cms/svg/logo.full.${this.$root.language}.svg`);
       logoTag.setAttribute('class', 'w-64');
       header.append(logoTag);
       const rrTitle = document.createElement('h1');

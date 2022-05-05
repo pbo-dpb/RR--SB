@@ -12,7 +12,7 @@
       
       <section class="pb-8 mb-8 border-b border-gray-100 flex flex-col items-center gap-8">
         <nav class="w-full text-right"><a href="#" id="alt-language-link" class="text-blue-800 underline"></a></nav>
-        <a href="https://www.pbo-dpb.gc.ca"><img src="https://www2.pbo-dpb.ca/cms/svg/logo.full.en.svg" alt="OPBO-BDPB" class="w-64" id="pbo-logo"></a>
+        <a href="https://www.pbo-dpb.gc.ca"><img src="https://www.pbo-dpb.ca/cms/svg/logo.full.en.svg" alt="OPBO-BDPB" class="w-64" id="pbo-logo"></a>
         <h1 id="tool-name" class="text-4xl font-extralight">RR-SB</h1>
       </section>
       
@@ -35,14 +35,14 @@ if (language === 'fr') {
   document.getElementById('alt-language-link').innerText = "English";
   document.getElementById('alt-language-link').setAttribute('href', '?lang=en')
   document.getElementById('pbo-logo').setAttribute('alt', 'BDPB');
-  document.getElementById('pbo-logo').setAttribute('src', 'https://www2.pbo-dpb.ca/cms/svg/logo.full.fr.svg');
+  document.getElementById('pbo-logo').setAttribute('src', 'https://www.pbo-dpb.ca/cms/svg/logo.full.fr.svg');
   
 }  else {
   title ="Ready Reckoner";
   document.getElementById('alt-language-link').innerText = "Français";
   document.getElementById('alt-language-link').setAttribute('href', '?lang=fr')
   document.getElementById('pbo-logo').setAttribute('alt', 'OPBO');
-  document.getElementById('pbo-logo').setAttribute('src', 'https://www2.pbo-dpb.ca/cms/svg/logo.full.en.svg');
+  document.getElementById('pbo-logo').setAttribute('src', 'https://www.pbo-dpb.ca/cms/svg/logo.full.en.svg');
 }
 document.getElementById('tool-name').innerText = title;
 document.title = title;
