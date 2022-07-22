@@ -75,6 +75,9 @@ export default {
         this.payload = j;
       });
   },
+  props: {
+    publicPath: String,
+  },
   computed: {
     language() {
       return this.strings.language;
