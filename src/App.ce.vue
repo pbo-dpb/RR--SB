@@ -45,6 +45,7 @@ import Section from "./Models/Section.js";
 import { Remarkable } from "remarkable";
 import { findDir } from "@vue/compiler-core";
 import UserGuide from "./components/Meta/UserGuide.vue";
+import WrapperEventDispatcher from "./WrapperEventDispatcher.js";
 
 
 
@@ -68,6 +69,7 @@ export default {
     UserGuide
 },
   mounted() {
+    WrapperEventDispatcher.dispatch(this.strings.title);
     fetch(payloadUrl)
       .then((r) => r.json())
       .then((j) => {
