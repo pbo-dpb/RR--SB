@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-html="outro"
-    class="prose prose-sm max-w-none border-t border-gray-100 pt-4"
-  ></div>
+  <div v-html="outro" class="prose dark:prose-invert prose-sm max-w-none border-t border-gray-100 pt-4"></div>
 </template>
 
 <script>
