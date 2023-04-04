@@ -6,7 +6,7 @@
     <datalist :id="`tickmarks-${uid}`">
       <option v-for="tick in tickmarks" :value="tick" :key="question.name + tick"></option>
     </datalist>
-    <div class="flex flex-row justify-between text-sm text-gray-600 text-gray-400" aria-hidden="true">
+    <div class="flex flex-row justify-between text-sm text-gray-600 dark:text-gray-400" aria-hidden="true">
       <span>{{ $root.strings.formatNumber(question.minimum, question.unit_style) }}</span>
       <span>{{ $root.strings.formatNumber(question.default_value, question.unit_style) }}</span>
       <span>{{ $root.strings.formatNumber(question.maximum, question.unit_style) }}</span>
