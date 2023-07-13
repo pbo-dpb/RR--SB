@@ -2,11 +2,11 @@
 - Govindadeva Bernier, Advisor-Analyst
 
 ### Contributors
+- Nora Nahornick, Senior Analyst
 - Katarina Michalyshyn, Analyst
-- Tim Scholz, Advisor-Analyst
 
 ### Prepared under the direction of
-- Kristina Grinshpoon, Acting Director
+- Chris Matier, General Director
 
 ### Web Developer
 - Rémy Vanherweghem, Digital Communications Analyst
