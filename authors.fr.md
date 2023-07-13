@@ -2,11 +2,11 @@
 - Govindadeva Bernier, conseiller-analyste
 
 ### Collaborateurs
+- Nora Nahornick, analyste principale
 - Katarina Michalyshyn, analyste
-- Tim Scholz, conseiller-analyste
 
 ### Préparé sous la direction de
-- Kristina Grinshpoon, directrice par intérim
+- Chris Matier, directeur général
 
 ### Développement Web
 - Rémy Vanherweghem, analyste en communications numériques
