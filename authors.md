@@ -1,4 +1,4 @@
-## Last updated: July 2023
+## Lastest update (July 2023):
 
 ### Lead Analyst
 - Govindadeva Bernier, Advisor-Analyst
