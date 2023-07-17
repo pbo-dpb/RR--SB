@@ -1,4 +1,4 @@
-## Dernière mise à jour (juillet 2023):
+## Dernière mise à jour (juillet 2023) :
 
 ### Analyste principal
 - Govindadeva Bernier, conseiller-analyste
