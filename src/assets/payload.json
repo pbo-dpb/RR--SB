@@ -1,10 +1,10 @@
 {
     "total_revenue": 453257150000,
-    "last_update": "2023/07/24",
+    "last_update": "2023/07/27",
     "sections": [
         {
-            "title_en": "Marginal Tax Rates (Personal Income Tax)",
-            "title_fr": "Taux marginaux d'imposition (Impôt sur le revenu des particuliers)",
+            "title_en": "Personal Income Tax (Marginal Tax Rates)",
+            "title_fr": "Impôt sur le revenu des particuliers (Taux marginaux d'imposition)",
             "description_en": "Users can adjust any or all of the four personal tax rates, as well as the corresponding tax-bracket thresholds. Note that all rate and threshold changes are considered independently of other tax changes.",
             "description_fr": "L'utilisateur peut modifier les quatre taux d'imposition du revenu des particuliers, ainsi que les seuils correspondant à chacun. Les changements aux taux et aux seuils sont considérés comme indépendants des autres changements au régime fiscal.",
             "questions": [
@@ -86,8 +86,8 @@
             ]
         },
         {
-            "title_en": "Tax Brackets (Personal Income Tax)",
-            "title_fr": "Tranche d'imposition (Impôt sur le revenu des particuliers)",
+            "title_en": "Personal Income Tax (Tax Brackets)",
+            "title_fr": "Impôt sur le revenu des particuliers (Tranches d'imposition)",
             "description_en": "Users can adjust any or all of the four personal tax rates, as well as the corresponding tax-bracket thresholds. Note that all rate and threshold changes are considered independently of other tax changes.",
             "description_fr": "L'utilisateur peut modifier les quatre taux d'imposition du revenu des particuliers, ainsi que les seuils correspondant à chacun. Les changements aux taux et aux seuils sont considérés comme indépendants des autres changements au régime fiscal.",
             "questions": [
