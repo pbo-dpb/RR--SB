@@ -13,6 +13,5 @@
 ### Web Developer
 - Rémy Vanherweghem, Digital Communications Analyst
 
-*Nancy Beauchamp and Marie-Ève Hamel Laberge assisted with the preparation of this user guide.*
 
 For further information, please contact [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca).
