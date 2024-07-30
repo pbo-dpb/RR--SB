@@ -1,7 +1,7 @@
 {
   "name": "rrsb",
   "private": true,
-  "version": "0.2.0",
+  "version": "2.3.0",
   "scripts": {
     "dev": "vite --host --port 8080",
     "build": "vite build",
