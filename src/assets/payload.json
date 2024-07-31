@@ -103,7 +103,7 @@
                     "unit_value_down": -133921,
                     "unit_value_up": -133921,
                     "unit_style": "currency",
-                    "minimum": 9173.03,
+                    "minimum": 91733.0,
                     "maximum": 131733.0,
                     "step": 2500.0
                 },
