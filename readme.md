@@ -111,6 +111,9 @@ The Ready Reckoner uses a json payload file as a data source. To update the Read
 
 #### Dynamic Questions
 
+> [!CAUTION]
+> Dynamic questions are using an indirect eval() function to evaluate the function property. This is a potential security risk. The content of the payload.json should be carefully reviewed before being deployed.
+
 Dynamic questions allow for more complex calculations to be performed when users interact with the slider. The `function` property is a string that is evaluated when the parameter is changed. The string should be a valid ECMAScript expression that uses the `q` object to access a copy of the `question` object and explicitely return a value, in millions of dollars.
 
 The `q` object source can be found in the `src/Models/Question.js` file. In a nutshell, all the properties that are set in the `payload.json` for that question will be assigned to that object and could therefore be used to calculate the impact on revenue/expenses. The currently selected value of the question can be accessed using `q.user_value`.
@@ -137,3 +140,4 @@ The following question could be used to calculate the impact using a list of har
 },
 ```
 Where the `_hard_coded_steps` object is used to map the user value to the impact on revenue/expenses. In this case, sliding the cursor to the left (to `0`) would decrease the revenue by 1,000,000, while sliding it to the right (to `2`) will increase the revenue by 1,000,000.
+

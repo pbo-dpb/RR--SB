@@ -112,6 +112,9 @@ Le simulateur budgétaire utilise un fichier de charge utile JSON comme source d
 ```
 #### Questions dynamiques
 
+> [!CAUTION]
+> Les questions dynamiques utilisent une fonction `eval()` indirecte pour évaluer la propriété `function`. C'est un risque potentiel pour la sécurité. Le contenu du fichier `payload.json` doit être soigneusement examiné avant d'être déployé.
+
 Les questions dynamiques permettent des calculs plus complexes à être effectués lorsque les utilisateurs interagissent avec le curseur. La propriété `function` est une chaîne de caractères qui est évaluée lorsque le paramètre est modifié. La chaîne doit être une expression ECMAScript valide qui utilise l'objet `q` pour accéder à une copie de l'objet `question` et retourner explicitement une valeur, en millions de dollars.
 
 Le code source de l'objet `q` peut être trouvé dans le fichier `src/Models/Question.js`. En un mot, toutes les propriétés définies dans le `payload.json` pour cette question seront assignées à cet objet et pourraient donc être utilisées pour calculer l'impact sur les revenus/dépenses. La valeur actuellement sélectionnée de la question peut être accédée en utilisant `q.user_value`.
