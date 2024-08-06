@@ -1,3 +1,5 @@
+## What is the Ready Reckoner?
+
 The Parliamentary Budget Officer (PBO) frequently receives requests pertaining to the potential revenue impacts arising from adjustments to the federal tax system.[^1] In response to these requests, the PBO has developed an online tool to estimate the potential impacts on federal budgetary revenues that would arise from adjusting various federal tax rates, credits, and brackets.[^2] Ready Reckoner estimates should be considered stylized rules of thumb.[^3]
 
 ### Reference year
@@ -44,3 +46,9 @@ The 2023 calendar year is the reference year for all estimates.
 [^10]: PBO did not include a behavioural response to changes in the BPA. PBO anticipates the behavioural response to be non-zero, but immaterial.
 [^11]: The tax system contains many linkages between the personal and corporate income tax systems to ensure that an individual is indifferent between earning income through a corporation or directly. This concept is generally referred to as "tax integration".
 [^12]: Ontario, Saskatchewan, and Yukon still have a lower corporate tax rate for manufacturing and processing profits at the provincial/territorial level. 
+
+---
+
+## Technical Notes
+
+The Ready Reckoner is a [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) built using [Vue.js](https://vuejs.org/). It adopts a similar design pattern as other PBO tools; see the [PBO Research Tool Boilerplate Project](https://github.com/pbo-dpb/pbo-research-tool-boilerplate--gabarit-des-outils-de-recherche).

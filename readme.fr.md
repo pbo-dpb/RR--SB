@@ -44,3 +44,10 @@ L’année civile 2023 est l’année de référence pour toutes les estimations
 [^10]: Le DPB n’a pas inclus de réponse comportementale quant aux changements du montant personnel de base. Il prévoit que la réponse comportementale ne sera pas nulle, mais sans importance. 
 [^11]: Le système fiscal comprend de nombreux liens entre les systèmes de l’impôt sur le revenu des particuliers et des sociétés, et ce, afin de garantir que la situation est la même pour une personne, que le revenu soit gagné par l’intermédiaire d’une société ou directement. Ce concept est généralement appelé « intégration fiscale ».
 [^12]: L'Ontario, la Saskatchewan et le Yukon ont encore un taux d'imposition réduit sur les bénéfices de fabrication et de transformation au niveau provincial/territorial.
+
+
+---
+
+## Notes techniques
+
+Le simulateur budgétaire est un [composant Web](https://developer.mozilla.org/fr/docs/Web/API/Web_components) construit à l'aide de [Vue.js](https://vuejs.org/). Il adopte un modèle de conception similaire à celui d'autres outils du DPB; voir le [Projet de gabarit des outils de recherche du DPB](https://github.com/pbo-dpb/pbo-research-tool-boilerplate--gabarit-des-outils-de-recherche).
