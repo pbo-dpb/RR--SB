@@ -68,7 +68,7 @@ Le simulateur budgétaire utilise un fichier de charge utile JSON comme source d
 
 #### Structure de la charge utile
 
-```json
+```javascript
 {
     "total_revenue": 000000000000, // Revenu total pour l'année de référence, en millions de dollars
     "last_update": "1970/01/01", // Date de la dernière mise à jour
@@ -121,7 +121,7 @@ Le code source de l'objet `q` peut être trouvé dans le fichier `src/Models/Que
 
 La question suivante pourrait être utilisée pour calculer l'impact en utilisant une liste de pas codés en dur : 
 
-```json
+```javascript
 {
                     "name_en": "Lorem Question", 
                     "name_fr": "Question Lorem", 

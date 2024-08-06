@@ -66,7 +66,7 @@ The Ready Reckoner uses a json payload file as a data source. To update the Read
 
 #### Payload Structure
 
-```json
+```javascript
 {
     "total_revenue": 000000000000, // Total revenue for the reference year in millions of dollars
     "last_update": "1970/01/01", // Last update date
@@ -120,7 +120,7 @@ The `q` object source can be found in the `src/Models/Question.js` file. In a nu
 
 The following question could be used to calculate the impact using a list of hard coded steps:
 
-```json
+```javascript
 {
                     "name_en": "Lorem Question", 
                     "name_fr": "Question Lorem", 
