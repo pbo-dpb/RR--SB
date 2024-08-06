@@ -4,7 +4,7 @@
       <label class="font-semibold" :for="uid">{{ question.name }}</label>
 
       <ul class="font-light flex flex-col">
-        <li>
+        <li v-if="!question.function">
           {{
             $root.strings.__("impact_per_unit", {
               unit: $root.strings.formatNumber(question.step, question.unit_style),
@@ -23,10 +23,10 @@
             {{
               $root.strings.formatNumber(question.default_value, question.unit_style)
             }}</span><span :class="{
-  'text-orange-600': question.isAltered,
-}">{{
+              'text-orange-600': question.isAltered,
+            }">{{
   $root.strings.formatNumber(question.user_value, question.unit_style)
-}}</span>
+            }}</span>
         </li>
       </ul>
 
@@ -46,8 +46,8 @@
         'bg-green-800': question.userValueImpact > 0,
         'bg-gray-500': !question.isAltered,
       }"><span v-if="question.isAltered">{{
-  $root.strings.formatNumber($root.strings.roundCurrency(question.userValueImpact / 1000000.0), "currency")
-}}</span><span v-else>0</span></span>
+        $root.strings.formatNumber($root.strings.roundCurrency(question.userValueImpact / 1000000.0), "currency")
+          }}</span><span v-else>0</span></span>
     </div>
   </div>
 </template>

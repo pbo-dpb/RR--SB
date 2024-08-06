@@ -1,5 +1,3 @@
-## What is the Ready Reckoner?
-
 The Parliamentary Budget Officer (PBO) frequently receives requests pertaining to the potential revenue impacts arising from adjustments to the federal tax system.[^1] In response to these requests, the PBO has developed an online tool to estimate the potential impacts on federal budgetary revenues that would arise from adjusting various federal tax rates, credits, and brackets.[^2] Ready Reckoner estimates should be considered stylized rules of thumb.[^3]
 
 ### Reference year
@@ -52,3 +50,90 @@ The 2023 calendar year is the reference year for all estimates.
 ## Technical Notes
 
 The Ready Reckoner is a [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) built using [Vue.js](https://vuejs.org/). It adopts a similar design pattern as other PBO tools; see the [PBO Research Tool Boilerplate Project](https://github.com/pbo-dpb/pbo-research-tool-boilerplate--gabarit-des-outils-de-recherche).
+
+### Development
+
+To run the Ready Reckoner locally, clone the repository and run the following commands:
+
+```bash
+npm install
+npm run dev
+```
+
+### Updating the Ready Reckoner
+
+The Ready Reckoner uses a json payload file as a data source. To update the Ready Reckoner, modify the `src/assets/payload.json` file.
+
+#### Payload Structure
+
+```json
+{
+    "total_revenue": 000000000000, // Total revenue for the reference year in millions of dollars
+    "last_update": "1970/01/01", // Last update date
+    "sections": [ // An array of sections that will be used to populate the Ready Reckoner's user interface.
+        {
+            "title_en": "Personal Income Tax (Marginal Tax Rates)", // Section title in English
+            "title_fr": "Impôt sur le revenu des particuliers (Taux marginaux d'imposition)", // Section title in French
+            "description_en": "Users can adjust any or all of the four personal tax rates, as well as the corresponding tax-bracket thresholds...", // Section description in English
+            "description_fr": "L'utilisateur peut modifier les quatre taux d'imposition du revenu des particuliers, ainsi que les seuils correspondant à chacun...", // Section description in French
+            "questions": [ // An array of interactive parameters ("Questions").
+                { // Typical hard coded question
+                    "name_en": "Lowest Rate", // Parameter name in English
+                    "name_fr": "Taux le moins élevé", // Parameter name in French
+                    "description_en": null, // An optional parameter description in English (optional)
+                    "description_fr": null, // An optional parameter description in French (optional)
+                    "default_value": 15, // Default value for the parameter. Where is the cursor on load?
+                    "unit_value_down": 0000000000, // Impact on revenue when the parameter is decreased by one unit.
+                    "unit_value_up": 0000000000, // Impact on revenue when the parameter is increased by one unit.
+                    "unit_style": "percent", // Unit style to display. Options: "percent" or "currency".
+                    "minimum": 13.0, // Minimum value for the parameter.
+                    "maximum": 17.0, // Maximum value for the parameter.
+                    "step": 0.25 // Step value for the parameter. E.g. 0.25 will apply unit_value_down*-0.25 when use decreases the parameter by one step on the slider.
+                    // "function": "" // Ommitted
+                },
+                { // Dynamic question
+                    "name_en": "Lowest Rate", 
+                    "name_fr": "Taux le moins élevé", 
+                    "description_en": null, 
+                    "description_fr": null, 
+                    "default_value": 15, 
+                    //"unit_value_down": 0000000000, // Ommitted
+                    //"unit_value_up": 0000000000, // Ommitted
+                    "unit_style": "percent", 
+                    "minimum": 13.0, 
+                    "maximum": 17.0, 
+                    "step": 0.25,
+                    "function": "return q.user_value ** 2", // A function that is evaluated after user interactions with that question. Will override the function that normally uses the unit_value_down and unit_value_up properties to compute the impact on total revenue/expenses. See Dynamic Questions for more information.
+                },
+            ]
+        },
+```
+
+#### Dynamic Questions
+
+Dynamic questions allow for more complex calculations to be performed when users interact with the slider. The `function` property is a string that is evaluated when the parameter is changed. The string should be a valid ECMAScript expression that uses the `q` object to access a copy of the `question` object and explicitely return a value, in millions of dollars.
+
+The `q` object source can be found in the `src/Models/Question.js` file. In a nutshell, all the properties that are set in the `payload.json` for that question will be assigned to that object and could therefore be used to calculate the impact on revenue/expenses. The currently selected value of the question can be accessed using `q.user_value`.
+
+The following question could be used to calculate the impact using a list of hard coded steps:
+
+```json
+{
+                    "name_en": "Lorem Question", 
+                    "name_fr": "Question Lorem", 
+                    "description_en": null, 
+                    "description_fr": null, 
+                    "default_value": 1, 
+                    "unit_style": "currency", 
+                    "minimum": 0, 
+                    "maximum": 2, 
+                    "step": 1,
+                    "_hard_coded_steps": {
+                      "0": -1000000,
+                      "1": 0,
+                      "2" : 1000000
+                      },
+                    "function": "return q._hard_coded_steps[q.user_value]"
+},
+```
+Where the `_hard_coded_steps` object is used to map the user value to the impact on revenue/expenses. In this case, sliding the cursor to the left (to `0`) would decrease the revenue by 1,000,000, while sliding it to the right (to `2`) will increase the revenue by 1,000,000.

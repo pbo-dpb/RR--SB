@@ -51,3 +51,91 @@ L’année civile 2023 est l’année de référence pour toutes les estimations
 ## Notes techniques
 
 Le simulateur budgétaire est un [composant Web](https://developer.mozilla.org/fr/docs/Web/API/Web_components) construit à l'aide de [Vue.js](https://vuejs.org/). Il adopte un modèle de conception similaire à celui d'autres outils du DPB; voir le [Projet de gabarit des outils de recherche du DPB](https://github.com/pbo-dpb/pbo-research-tool-boilerplate--gabarit-des-outils-de-recherche).
+
+
+### Développement
+
+Pour exécuter le simulateur budgétaire localement, clonez le dépôt et exécutez les commandes suivantes :
+
+```bash
+npm install
+npm run dev
+```
+
+### Mettre à jour le simulateur budgétaire
+
+Le simulateur budgétaire utilise un fichier de charge utile JSON comme source de données. Pour mettre à jour le simulateur budgétaire, modifiez le fichier `src/assets/payload.json`.
+
+#### Structure de la charge utile
+
+```json
+{
+    "total_revenue": 000000000000, // Revenu total pour l'année de référence, en millions de dollars
+    "last_update": "1970/01/01", // Date de la dernière mise à jour
+    "sections": [ // Une liste de sections qui seront utilisées pour peupler l'interface utilisateur du simulateur budgétaire.
+        {
+            "title_en": "Personal Income Tax (Marginal Tax Rates)", // Titre de la section en anglais
+            "title_fr": "Impôt sur le revenu des particuliers (Taux marginaux d'imposition)", // Titre de la section en français
+            "description_en": "Users can adjust any or all of the four personal tax rates, as well as the corresponding tax-bracket thresholds...", // Description de la section en anglais (facultative)
+            "description_fr": "L'utilisateur peut modifier les quatre taux d'imposition du revenu des particuliers, ainsi que les seuils correspondant à chacun...", // Description de la section en français (facultative)
+            "questions": [ // Une liste de paramètres intéractifs ("Questions")
+                { // Question typique avec ajustements selon des valeurs prédéfinies
+                    "name_en": "Lowest Rate", // Nom du paramètre en anglais
+                    "name_fr": "Taux le moins élevé", // Nom du paramètre en français
+                    "description_en": null, // Description du paramètre en anglais (facultative)
+                    "description_fr": null, // Description du paramètre en français (facultative)
+                    "default_value": 15, // Valeur par défaut pour le paramètre. Où se trouve le curseur lors du chargement?
+                    "unit_value_down": 0000000000, // Impact sur les revenus lorsque le paramètre est diminué d'une unité.
+                    "unit_value_up": 0000000000, // Impact sur les revenus lorsque le paramètre est augmenté d'une unité.
+                    "unit_style": "percent", // Style de l'unité à afficher. Options : "percent" ou "currency".
+                    "minimum": 13.0, // Valeur minimale pour le paramètre.
+                    "maximum": 17.0, // Valeur maximale pour le paramètre.
+                    "step": 0.25 //Valeur du pas pour le paramètre. Par exemple, 0.25 appliquera unit_value_down * -0,25 lorsque l'utilisateur diminue le paramètre d'un pas sur le curseur.
+                    // "function": "" // Omission
+                },
+                { // Question dynamique
+                    "name_en": "Lowest Rate", 
+                    "name_fr": "Taux le moins élevé", 
+                    "description_en": null, 
+                    "description_fr": null, 
+                    "default_value": 15, 
+                    //"unit_value_down": 0000000000, //Omission
+                    //"unit_value_up": 0000000000, // Omission
+                    "unit_style": "percent", 
+                    "minimum": 13.0, 
+                    "maximum": 17.0, 
+                    "step": 0.25,
+                    "function": "return q.user_value ** 2", // Une fonction qui est évaluée après les interactions de l'utilisateur avec cette question. Remplacera la fonction qui utilise normalement les propriétés unit_value_down et unit_value_up pour calculer l'impact sur les revenus/dépenses totaux. Voir les questions dynamiques pour plus d'informations.
+                },
+            ]
+        },
+```
+#### Questions dynamiques
+
+Les questions dynamiques permettent des calculs plus complexes à être effectués lorsque les utilisateurs interagissent avec le curseur. La propriété `function` est une chaîne de caractères qui est évaluée lorsque le paramètre est modifié. La chaîne doit être une expression ECMAScript valide qui utilise l'objet `q` pour accéder à une copie de l'objet `question` et retourner explicitement une valeur, en millions de dollars.
+
+Le code source de l'objet `q` peut être trouvé dans le fichier `src/Models/Question.js`. En un mot, toutes les propriétés définies dans le `payload.json` pour cette question seront assignées à cet objet et pourraient donc être utilisées pour calculer l'impact sur les revenus/dépenses. La valeur actuellement sélectionnée de la question peut être accédée en utilisant `q.user_value`.
+
+La question suivante pourrait être utilisée pour calculer l'impact en utilisant une liste de pas codés en dur : 
+
+```json
+{
+                    "name_en": "Lorem Question", 
+                    "name_fr": "Question Lorem", 
+                    "description_en": null, 
+                    "description_fr": null, 
+                    "default_value": 1, 
+                    "unit_style": "currency", 
+                    "minimum": 0, 
+                    "maximum": 2, 
+                    "step": 1,
+                    "_hard_coded_steps": {
+                      "0": -1000000,
+                      "1": 0,
+                      "2" : 1000000
+                      },
+                    "function": "return q._hard_coded_steps[q.user_value]"
+},
+```
+
+Où l'objet `_hard_coded_steps` est utilisé pour mapper la valeur de l'utilisateur à l'impact sur les revenus/dépenses. Dans ce cas, déplacer le curseur vers la gauche (vers `0`) diminuerait les revenus de 1 000 000, tandis que le déplacer vers la droite (vers `2`) augmenterait les revenus de 1 000 000.
