@@ -1,89 +1,140 @@
 <template>
   <aside class="flex flex-col-reverse lg:flex-col gap-8">
-
     <div class="md:block">
-      <sidebar-guide></sidebar-guide>
+      <SidebarGuide :render-user-guide="renderUserGuide" :strings="strings" />
     </div>
-    <div v-if="$root.balance">
-
+    <div v-if="balance">
       <div ref="printable">
         <ul class="flex flex-col gap-2 border-b border-gray-100 mb-2 pb-2">
-          <section-recap v-for="section in $root.payload.sections" :key="section.title"
-            :section="section"></section-recap>
+          <SectionRecap
+            v-for="section in sections"
+            :key="section.title"
+            :section="section"
+          />
         </ul>
-
-        <sidebar-kv>
-          <template v-slot:key>{{ $root.strings.sidebar_total_impact }}</template>
-          <template v-slot:value>{{ $root.strings.formatNumber($root.strings.roundCurrency($root.balance / 1000000),
-            "currency") }}</template>
-        </sidebar-kv>
+        <SidebarKv>
+          <template v-slot:key>{{
+            localizer.language === "en"
+              ? strings.sidebar_total_impact.en
+              : strings.sidebar_total_impact.fr
+          }}</template>
+          <template v-slot:value>
+            {{
+              localizer.formatNumber(
+                localizer.roundCurrency(balance / 1000000),
+                "currency"
+              )
+            }}
+          </template>
+        </SidebarKv>
       </div>
 
       <button
         class="hidden lg:block mt-4 text-sm font-semibold border border-blue-800 text-blue-800 dark:text-blue-200 dark:border-blue-200 rounded px-4 py-1 w-full hover:bg-blue-100 dark:hover:bg-blue-800"
-        @click="triggerPrint">{{ $root.strings.print }}</button>
-
+        @click="triggerPrint"
+      >
+        {{ localizer.language === "en" ? strings.print.en : strings.print.fr }}
+      </button>
     </div>
-
   </aside>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from "vue";
 import SectionRecap from "./SectionRecap.vue";
 import SidebarKv from "./SidebarKv.vue";
 import SidebarGuide from "./SidebarGuide.vue";
+import Section from "../../Models/Section";
+import Localizer, { Strings } from "../../Localizer";
 
-export default {
-  components: {
-    SectionRecap,
-    SidebarKv,
-    SidebarGuide,
-  },
-  computed: {},
-  methods: {
-    triggerPrint() {
+const props = defineProps<{
+  balance: number;
+  sections: Section[];
+  strings: Strings;
+  renderUserGuide: boolean;
+  fullTextTotal: string;
+}>();
 
+const balance = computed(() => props.balance);
+const sections = computed(() => props.sections);
 
-      const prHtml = document.createElement("html");
-      prHtml.insertAdjacentHTML('afterbegin', '<head><meta charset="UTF-8" /></head>')
-      const prBody = document.createElement("body");
-      prHtml.appendChild(prBody);
+const localizer = new Localizer();
+const strings = props.strings;
+const fullTextTotal = computed(() => props.fullTextTotal);
 
-      const tailwindCdn = document.createElement('script');
-      tailwindCdn.setAttribute('src', 'https://cdn.tailwindcss.com');
-      prBody.appendChild(tailwindCdn);
+const printable = ref<HTMLDivElement | null>(null);
 
-      const container = document.createElement('div');
-      container.setAttribute('class', 'p-8');
-      prBody.appendChild(container);
+const triggerPrint = () => {
+  if (!printable.value) return;
 
-      const header = document.createElement('header');
-      container.append(header)
+  const prHtml = document.createElement("html");
+  prHtml.insertAdjacentHTML(
+    "afterbegin",
+    '<head><meta charset="UTF-8" /></head>'
+  );
+  const prBody = document.createElement("body");
+  prHtml.appendChild(prBody);
 
-      header.setAttribute('class', 'flex flex-col items-center gap-2 mb-8');
-      const logoTag = document.createElement('img');
-      logoTag.setAttribute('src', `https://www.pbo-dpb.ca/cms/svg/logo.full.${this.$root.language}.svg`);
-      logoTag.setAttribute('class', 'w-64');
-      header.append(logoTag);
-      const rrTitle = document.createElement('h1');
-      rrTitle.setAttribute('class', 'text-xl font-semibold');
-      rrTitle.append(this.$root.strings.title);
-      header.append(rrTitle)
+  const tailwindCdn = document.createElement("script");
+  tailwindCdn.setAttribute("src", "https://cdn.tailwindcss.com");
+  prBody.appendChild(tailwindCdn);
 
-      header.insertAdjacentHTML('beforeend', "<small class='italic text-gray-800'>" + [this.$root.strings.impact_in_millions, (new Date()).toLocaleString(`${this.$root.language}-CA`)].join(' - ') + "</small>");
+  const container = document.createElement("div");
+  container.setAttribute("class", "p-8");
+  prBody.appendChild(container);
 
-      container.append(this.$refs.printable.cloneNode(true));
+  const header = document.createElement("header");
+  container.append(header);
 
-      container.insertAdjacentHTML('beforeend', `<div class='mt-8 text-center font-semibold'>${this.$root.fullTextTotal}</div>`);
+  header.setAttribute("class", "flex flex-col items-center gap-2 mb-8");
+  const logoTag = document.createElement("img");
+  logoTag.setAttribute(
+    "src",
+    `https://www.pbo-dpb.ca/cms/svg/logo.full.${localizer.language}.svg`
+  );
+  logoTag.setAttribute("class", "w-64");
+  header.append(logoTag);
 
-      const winUrl = URL.createObjectURL(
-        new Blob([`<!DOCTYPE html>`, prHtml.outerHTML], { type: "text/html" }));
-      const printWindow = window.open(winUrl, "Print-Window", `width=800,height=400,screenX=200,screenY=200`);
-      printWindow.onload = () => {
-        setTimeout(() => { printWindow.print() }, 500);
+  const rrTitle = document.createElement("h1");
+  rrTitle.setAttribute("class", "text-xl font-semibold");
+  rrTitle.append(
+    localizer.language === "en" ? strings.title.en : strings.title.fr
+  );
+  header.append(rrTitle);
 
-      };
-    }
-  }
+  header.insertAdjacentHTML(
+    "beforeend",
+    "<small class='italic text-gray-800'>" +
+      [
+        localizer.language === "en"
+          ? strings.impact_in_millions.en
+          : strings.impact_in_millions.fr,
+        new Date().toLocaleString(`${localizer.language}-CA`),
+      ].join(" - ") +
+      "</small>"
+  );
+
+  container.append(printable.value.cloneNode(true));
+
+  container.insertAdjacentHTML(
+    "beforeend",
+    `<div class='mt-8 text-center font-semibold'>${fullTextTotal.value}</div>`
+  );
+
+  const winUrl = URL.createObjectURL(
+    new Blob([`<!DOCTYPE html>`, prHtml.outerHTML], { type: "text/html" })
+  );
+  const printWindow = window.open(
+    winUrl,
+    "Print-Window",
+    `width=800,height=400,screenX=200,screenY=200`
+  );
+  printWindow
+    ? (printWindow.onload = () => {
+        setTimeout(() => {
+          printWindow.print();
+        }, 500);
+      })
+    : console.error("Print Window is null");
 };
 </script>

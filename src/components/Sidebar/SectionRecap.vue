@@ -2,39 +2,39 @@
   <li v-if="questions.length">
     <div class="font-semibold">{{ section.title }}</div>
     <ul>
-      <sidebar-kv v-for="question in questions">
+      <SidebarKv v-for="question in questions" :key="question.name">
         <template v-slot:key>
           {{ question.name }}
-          <div class="text-gray-800 dark:text-gray-200 italic">{{
-            $root.strings.formatNumber(question.user_value, question.unit_style)
-          }}</div>
+          <div class="text-gray-800 dark:text-gray-200 italic">
+            {{
+              localizer.formatNumber(question.user_value, question.unit_style)
+            }}
+          </div>
         </template>
         <template v-slot:value>
-          {{ $root.strings.formatNumber($root.strings.roundCurrency(question.userValueImpact / 1000000.0), "currency") }}
+          {{
+            localizer.formatNumber(
+              localizer.roundCurrency(question.userValueImpact / 1000000.0),
+              "currency"
+            )
+          }}
         </template>
-      </sidebar-kv>
+      </SidebarKv>
     </ul>
   </li>
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from "vue";
 import Section from "../../Models/Section";
 import SidebarKv from "./SidebarKv.vue";
+import Localizer from "../../Localizer";
 
-export default {
-  components: {
-    SidebarKv
-  },
-  props: {
-    section: {
-      type: Section,
-      required: true,
-    },
-  },
-  computed: {
-    questions() {
-      return this.section.questions.filter(q => q.isAltered)
-    }
-  }
-};
+const localizer = new Localizer();
+
+const props = defineProps<{ section: Section }>();
+
+const questions = computed(() => {
+  return props.section.questions.filter((question) => question.isAltered);
+});
 </script>

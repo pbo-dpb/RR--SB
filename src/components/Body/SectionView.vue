@@ -1,5 +1,5 @@
 <template>
-  <figure class="">
+  <figure>
     <h3 class="text-lg font-semibold" :class="{ 'mb-4': !section.description, 'mb-2': section.description }">
       {{ section.title }}
     </h3>
@@ -8,21 +8,21 @@
     </p>
 
     <div class="flex flex-col gap-8">
-      <Question-wrapper v-for="question in section.questions" :key="question.name"
-        :question="question"></Question-wrapper>
+      <QuestionWrapper 
+        v-for="question in section.questions" 
+        :key="question.name"
+        :question="question"
+      />
     </div>
   </figure>
 </template>
-<script>
-import Section from "../../Models/Section";
-import QuestionWrapper from "./QuestionWrapper.vue";
-export default {
-  props: {
-    section: {
-      type: Section,
-      required: true,
-    },
-  },
-  components: { QuestionWrapper },
-};
+
+<script setup lang="ts">
+import Section from '../../Models/Section';
+import QuestionWrapper from './QuestionWrapper.vue';
+
+defineProps<{ section: Section }>();
+
+// Registering the QuestionWrapper component
+// Note: No need for an explicit components option with `script setup`.
 </script>

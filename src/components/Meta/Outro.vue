@@ -1,17 +1,21 @@
 <template>
-  <div v-html="outro" class="prose dark:prose-invert prose-sm max-w-none border-t border-gray-100 pt-4"></div>
+  <div
+    v-html="outro"
+    class="prose dark:prose-invert prose-sm max-w-none border-t border-gray-100 pt-4"
+  ></div>
 </template>
 
-<script>
-import { Remarkable } from "remarkable";
+<script setup lang="ts">
+import { computed } from 'vue';
+import { Remarkable } from 'remarkable';
+import Localizer, { Strings } from '../../Localizer';
 
-export default {
-  computed: {
-    outro() {
-      if (!this.$root.strings.outro) return "";
-      const md = new Remarkable();
-      return md.render(this.$root.strings.outro);
-    },
-  },
-};
+const props = defineProps<{strings:Strings}>();
+const strings = props.strings;
+const localizer = new Localizer();
+
+const outro = computed(() => {
+  const md = new Remarkable();
+    return md.render(localizer.language === "en" ? strings.outro.en : strings.outro.fr);
+});
 </script>
