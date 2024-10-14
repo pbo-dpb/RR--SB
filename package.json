@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/remarkable": "^2.0.8",
     "remarkable": "^2.0.1",
     "vue": "^3.4.35"
   },
   "devDependencies": {
+    "@types/remarkable": "^2.0.8",
     "@vitejs/plugin-vue": "^5.1.2",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
