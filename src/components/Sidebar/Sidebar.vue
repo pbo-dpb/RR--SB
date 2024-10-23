@@ -1,7 +1,7 @@
 <template>
   <aside class="flex flex-col-reverse lg:flex-col gap-8">
     <div class="md:block">
-      <SidebarGuide :render-user-guide="renderUserGuide" :strings="strings" />
+      <SidebarGuide :render-user-guide="renderUserGuide" @update:renderUserGuide="updateRenderUserGuide" :strings="strings" />
     </div>
     <div v-if="balance">
       <div ref="printable">
@@ -57,6 +57,15 @@ const props = defineProps<{
 
 const balance = computed(() => props.balance);
 const sections = computed(() => props.sections);
+
+const emit = defineEmits(['update:renderUserGuide']);
+
+const renderUserGuide = ref(props.renderUserGuide);
+
+const updateRenderUserGuide = (newVal: boolean) => {
+  renderUserGuide.value = newVal;
+  emit('update:renderUserGuide', newVal);
+};
 
 const localizer = new Localizer();
 const strings = props.strings;

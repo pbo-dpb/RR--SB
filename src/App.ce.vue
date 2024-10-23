@@ -26,6 +26,7 @@
               :strings="localizer.strings"
               :render-user-guide="renderUserGuide"
               :full-text-total="fullTextTotal"
+              @update:renderUserGuide="updateRenderUserGuide"
             />
           </div>
         </section>
@@ -43,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted} from "vue";
 import Localizer from "./Localizer";
 import payloadUrl from "./assets/payload.json?url";
 import Intro from "./components/Meta/Intro.vue";
@@ -61,7 +62,12 @@ import Question from "./Models/Question";
 
 const localizer = new Localizer();
 const payload = ref<any>(null);
-const renderUserGuide = ref(false);
+const renderUserGuide = ref<boolean>(false);
+
+const updateRenderUserGuide = (newVal: boolean) => {
+  renderUserGuide.value = newVal;
+  console.log(renderUserGuide.value)
+};
 
 onMounted(() => {
   WrapperEventDispatcher.dispatch(
@@ -114,7 +120,6 @@ const fullTextTotal = computed(() => {
     })
   );
 });
-
 </script>
 
 <style>

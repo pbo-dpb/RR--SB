@@ -51,6 +51,8 @@ const localizer = new Localizer();
 
 const parser = new Remarkable();
 
+console.log(strings);
+
 const userguide = computed(() => {
   return parser.render(
     localizer.language === "en" ? strings.readme.en : strings.readme.fr
