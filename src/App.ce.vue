@@ -37,7 +37,7 @@
   </main>
 
   <UserGuide
-    :render-user-guide="renderUserGuide"
+    v-model:renderUserGuide="renderUserGuide"
     :strings="localizer.strings"
     v-else
   />

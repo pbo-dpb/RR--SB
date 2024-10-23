@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-8">
     <button
-      @click="renderUserGuide = false"
+      @click="updateRenderUserGuide(false)"
       class="flex flex-row justify-start gap-2 items-center border border-blue-300 rounded font-semibold text-sm text-blue-800 dark:bg-blue-200 p-2"
     >
       <svg
@@ -18,11 +18,11 @@
           d="M10 19l-7-7m0 0l7-7m-7 7h18"
         />
       </svg>
-      {{ strings.user_guide_close_button }}
+      {{ localizer.user_guide_close_button }}
     </button>
 
     <h1 class="text-3xl font-thin">
-      {{ strings.user_guide_title }}
+      {{ localizer.user_guide_title }}
     </h1>
 
     <aside
@@ -38,30 +38,32 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { Remarkable } from "remarkable";
-import Localizer, { Strings } from "../../Localizer";
+import Localizer from "../../Localizer";
 
-const props = defineProps<{ renderUserGuide: boolean; strings: Strings }>();
+const props = defineProps<{
+  renderUserGuide: boolean;
+  strings: { [key: string]: any };
+}>();
 
-const renderUserGuide = props.renderUserGuide;
-const strings = props.strings;
+const emit = defineEmits(['update:renderUserGuide']);
+
+const renderUserGuide = ref(props.renderUserGuide);
+
+const updateRenderUserGuide = (newVal: boolean) => {
+  renderUserGuide.value = newVal;
+  emit('update:renderUserGuide', newVal);
+};
 
 const localizer = new Localizer();
-
 const parser = new Remarkable();
 
-console.log(strings);
-
 const userguide = computed(() => {
-  return parser.render(
-    localizer.language === "en" ? strings.readme.en : strings.readme.fr
-  );
+  return parser.render(localizer.readme);
 });
 
 const authors = computed(() => {
-  return parser.render(
-    localizer.language === "en" ? strings.authors.en : strings.authors.fr
-  );
+  return parser.render(localizer.authors);
 });
 </script>
