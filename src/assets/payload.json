@@ -419,8 +419,8 @@
                     "step": 1.0
                 },
                 {
-                    "name_en": "$100,000 Change in Small Business Income Limit",
-                    "name_fr": "Variation de 100 000 $ du plafond des affaires des petites entreprises",
+                    "name_en": "Change in Small Business Income Limit",
+                    "name_fr": "Variation du plafond des affaires des petites entreprises",
                     "description_en": "This would vary the amount of income for small Canadian-controlled private corporations that could be taxed at the small business rate. The income above this amount is taxed at the general corporate rate.",
                     "description_fr": "Cela varierait le montant du revenu des petites sociétés privées sous contrôle canadien qui pourrait être imposé au taux des petites entreprises. Les revenus supérieurs à ce montant sont imposés au taux général des sociétés.",
                     "default_value": 500000,
@@ -438,19 +438,6 @@
                         "700000": -572354718
                         },
                     "function": "return q._hard_coded_steps[q.user_value]"
-                },
-                {
-                    "name_en": "$200,000 Change in Small Business Income Limit",
-                    "name_fr": "Variation de 200 000 $ du plafond des affaires des petites entreprises",
-                    "description_en": "This would vary the amount of income for small Canadian-controlled private corporations that could be taxed at the small business rate. The income above this amount is taxed at the general corporate rate.",
-                    "description_fr": "Cela varierait le montant du revenu des petites sociétés privées sous contrôle canadien qui pourrait être imposé au taux des petites entreprises. Les revenus supérieurs à ce montant sont imposés au taux général des sociétés.",
-                    "default_value": 500000,
-                    "unit_value_down": 1303,
-                    "unit_value_up": -572,
-                    "unit_style": "currency",
-                    "minimum": 300000.0,
-                    "maximum": 700000.0,
-                    "step": 200000.0
                 },
                 {
                     "name_en": "Additional Tax on Banks and Life Insurers",
