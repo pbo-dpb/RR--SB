@@ -285,27 +285,6 @@
             ]
         },
         {
-            "title_en": "Capital Gains Inclusion Rate",
-            "title_fr": "Taux d'inclusion des gains en capital",
-            "description_en": "The Capital Gains Inclusion Rate is used to determine taxable capital gains and allowable capital losses for individuals and corporations.",
-            "description_fr": "Le taux d'inclusion des gains en capital est utilisé pour déterminer les gains en capital imposables et les pertes en capital déductibles pour les particuliers et les sociétés.",
-            "questions": [
-                {
-                    "name_en": "By 5 percentage points",
-                    "name_fr": "De 5 points de pourcentage",
-                    "description_en": "Increasing this rate increases the share of taxable capital gains for individuals and corporations.",
-                    "description_fr": "La hausse de ce taux augmente la part des gains en capital imposables pour les particuliers et les sociétés.",
-                    "default_value": 50,
-                    "unit_value_down": 503475067,
-                    "unit_value_up": 503475067,
-                    "unit_style": "percent",
-                    "minimum": 25.0,
-                    "maximum": 75.0,
-                    "step": 5.0
-                }
-            ]
-        },
-        {
             "title_en": "Tobacco Excise Duty Rate",
             "title_fr": "Taux de la taxe d'accise sur le tabac",
             "description_en": "Duty is payable at the point of packaging. When goods are imported to Canada, duty is paid by the importer.",
@@ -398,8 +377,8 @@
                     "description_en": null,
                     "description_fr": null,
                     "default_value": 15,
-                    "unit_value_down": 4041381649,
-                    "unit_value_up": 4041381649,
+                    "unit_value_down": 3827061274,
+                    "unit_value_up": 3827061274,
                     "unit_style": "percent",
                     "minimum": 10,
                     "maximum": 20,
@@ -411,8 +390,8 @@
                     "description_en": "Increasing the small business rate increases the tax payable by small corporations on the income below the small business limit.",
                     "description_fr": "Une augmentation du taux d'impôt sur le revenu des petites entreprises augmente l'impôt payable par ces sociétés sur leur revenu inférieur au plafond des affaires.",
                     "default_value": 9,
-                    "unit_value_down": 722582793,
-                    "unit_value_up": 722582793,
+                    "unit_value_down": 664062789,
+                    "unit_value_up": 664062789,
                     "unit_style": "percent",
                     "minimum": 6.0,
                     "maximum": 12.0,
@@ -443,8 +422,8 @@
                     "description_en": null,
                     "description_fr": null,
                     "default_value": 1.5,
-                    "unit_value_down": 449177212,
-                    "unit_value_up": 449177212,
+                    "unit_value_down": 427834851,
+                    "unit_value_up": 427834851,
                     "unit_style": "percent",
                     "minimum": 0.5,
                     "maximum": 2.5,
