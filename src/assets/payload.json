@@ -424,18 +424,16 @@
                     "description_en": "This would vary the amount of income for small Canadian-controlled private corporations that could be taxed at the small business rate. The income above this amount is taxed at the general corporate rate.",
                     "description_fr": "Cela varierait le montant du revenu des petites sociétés privées sous contrôle canadien qui pourrait être imposé au taux des petites entreprises. Les revenus supérieurs à ce montant sont imposés au taux général des sociétés.",
                     "default_value": 500000,
-                    //"unit_value_down": 549, // Ommitted
-                    //"unit_value_up": -324, // Ommitted
                     "unit_style": "currency",
                     "minimum": 300000.0,
                     "maximum": 700000.0,
                     "step": 100000.0,
                     "_hard_coded_steps": {
-                        "300000": 1303799750,
-                        "400000": 548768436,
+                        "300000": 1240898072,
+                        "400000": 522694063,
                         "500000": 0,
-                        "600000": -324394858,
-                        "700000": -572354718
+                        "600000": -308981449,
+                        "700000": -545159659
                         },
                     "function": "return q._hard_coded_steps[q.user_value]"
                 },
