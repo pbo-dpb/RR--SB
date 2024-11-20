@@ -16,16 +16,12 @@
         "fr": "Dernière mise à jour en :date"
     },
     "impact_in_millions": {
-        "en":"All revenue impacts in millions",
-        "fr":"L'incidence sur les recettes est exprimée en millions de dollars"
+        "en": "All revenue impacts in millions",
+        "fr": "L'incidence sur les recettes est exprimée en millions de dollars"
     },
     "selected_value": {
-        "en":"Selected Value:",
-        "fr":"Valeur sélectionnée :"
-    },
-    "impact_per_unit": {
-        "en":"Impact per :unit change: :impact",
-        "fr":"Impact par variation de :unit : :impact"
+        "en": "Selected Value:",
+        "fr": "Valeur sélectionnée :"
     },
     "total_increase": {
         "en": "Your changes would *decrease expenses or increase revenue* by :absbalance million, or :percent of total revenues.",
@@ -45,18 +41,18 @@
     },
     "user_guide_cta_title": {
         "en": "Learn more about this tool",
-        "fr" : "En savoir plus sur cet outil"
+        "fr": "En savoir plus sur cet outil"
     },
     "user_guide_cta_button": {
         "en": "Open the User Guide",
-        "fr" : "Ouvrir le guide d'utilisation"
+        "fr": "Ouvrir le guide d'utilisation"
     },
     "user_guide_close_button": {
         "en": "Close the User Guide",
-        "fr" : "Fermer le Guide d'utilisation"
+        "fr": "Fermer le Guide d'utilisation"
     },
     "user_guide_title": {
         "en": "User Guide",
-        "fr" : "Guide d'utilisation"
+        "fr": "Guide d'utilisation"
     }
 }

@@ -16,9 +16,6 @@ export default class Question {
         this.cached_dynamic_eval_results = {};
     }
 
-    get impactPerUnit() {
-        return (Math.abs(this.unit_value_down) + Math.abs(this.unit_value_up)) / 2 * this.step;
-    }
 
     get isAltered() {
         if (this.user_value == this.default_value) return 0;
