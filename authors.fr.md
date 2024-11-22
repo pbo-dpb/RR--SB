@@ -1,14 +1,14 @@
 ## Dernière mise à jour (juillet 2023) :
 
 ### Analyste principal
-- Govindadeva Bernier, conseiller-analyste
+- Zachary Vrhovsek, analyste
 
 ### Collaborateurs
-- Nora Nahornick, analyste principale
+- Ulysse Robert-Lacroix, analyste
 - Katarina Michalyshyn, analyste
 
 ### Préparé sous la direction de
-- Chris Matier, directeur général
+- Govindadeva Bernier, directeur
 
 ### Développement Web
 - Rémy Vanherweghem, analyste en communications numériques
