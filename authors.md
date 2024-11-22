@@ -1,14 +1,14 @@
 ## Latest update:
 
 ### Lead Analyst
-- Govindadeva Bernier, Advisor-Analyst
+- Zachary Vrhovsek, Analyst
 
 ### Contributors
-- Nora Nahornick, Senior Analyst
+- Ulysse Robert-Lacroix, Analyst
 - Katarina Michalyshyn, Analyst
 
 ### Prepared under the direction of
-- Chris Matier, General Director
+- Govindadeva Bernier, Director
 
 ### Web Developer
 - Rémy Vanherweghem, Digital Communications Analyst
