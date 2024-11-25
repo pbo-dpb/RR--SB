@@ -9,7 +9,7 @@ The 2024 calendar year is the reference year for all estimates.
 - The estimates for Marginal Tax Rates, Tax Brackets, Basic Personal and Spousal Amounts, Goods and Services Tax (GST), GST Credit, and the Canada Child Benefit (CCB) were developed using the Statistics Canada Social Policy Simulation Database and Model (SPSD/M v. 30.2).[^3]
 - The estimates for both alcohol and tobacco excise duty rates are generated in PBO’s Excise Tax Model, which accounts for consumption, prices and historical excise revenues.[^4]
 - Estimates shown under the Corporate Income Taxes (CIT) section were developed using the PBO’s Corporate Tax Model.[^5] Simulations were performed on 2021 tax data using 2024 tax parameters and the results were scaled up to 2024 based on our October 2024 Economic and Fiscal Outlook projection of CIT revenue.[^6] For the General Corporate Rate and the Small Business Rate, SPSD/M v. 30.2 was used to adjust the dividend gross-up rate and the federal dividend tax credit rate for personal income taxes (PIT).
-- The estimates in the Ready Reckoner are in line with our October 2024 Economic and Fiscal Outlook, adjusted to incorporate Budget 2023 measures.
+- The estimates in the Ready Reckoner are in line with our October 2024 Economic and Fiscal Outlook.
 
 ### Static or Behavioural Estimate
 
