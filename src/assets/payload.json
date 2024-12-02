@@ -1,6 +1,6 @@
 {
     "total_revenue": 496591000000,
-    "last_update": "2024/11/25",
+    "last_update": "2024/12/02",
     "sections": [
         {
             "title_en": "Personal Income Tax (Marginal Tax Rates)",
@@ -14,7 +14,7 @@
                     "description_en": null,
                     "description_fr": null,
                     "default_value": 15,
-                    "unit_value_down":  5679992311,
+                    "unit_value_down": 5679992311,
                     "unit_value_up": 5679992311,
                     "unit_style": "percent",
                     "minimum": 13.0,
@@ -181,7 +181,7 @@
                     "description_en": null,
                     "description_fr": null,
                     "default_value": 5,
-                    "unit_value_down":  10511307810,
+                    "unit_value_down": 10511307810,
                     "unit_value_up": 10511307810,
                     "unit_style": "percent",
                     "minimum": 3.0,
@@ -413,7 +413,7 @@
                         "500000": 0,
                         "600000": -308981449,
                         "700000": -545159659
-                        },
+                    },
                     "function": "return q._hard_coded_steps[q.user_value]"
                 },
                 {

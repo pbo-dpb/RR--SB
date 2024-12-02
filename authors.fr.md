@@ -1,4 +1,4 @@
-## Dernière mise à jour (juillet 2023) :
+## Dernière mise à jour (décembre 2024) :
 
 ### Analyste principal
 - Zachary Vrhovsek, analyste
@@ -11,7 +11,7 @@
 - Govindadeva Bernier, directeur
 
 ### Développement Web
-- Rémy Vanherweghem, analyste en communications numériques
+- Mohammed Elhasnaoui, développeur d’applications Web (étudiant)
+- Rémy Vanherweghem, gestionnaire, stratégie numérique et rapports parlementaires
 
-
-Pour de plus amples renseignements, veuillez communiquer avec le DPB à l’adresse suivante : [dpb-pbo@parl.gc.ca](mailto:dpb-pbo@parl.gc.ca).
+Pour de plus amples renseignements, veuillez [communiquer avec le Bureau du directeur parlementaire du budget](https://www.pbo-dpb.ca/fr/contact--contact).

@@ -1,4 +1,4 @@
-## Latest update:
+## Latest update (December 2024):
 
 ### Lead Analyst
 - Zachary Vrhovsek, Analyst
@@ -10,8 +10,9 @@
 ### Prepared under the direction of
 - Govindadeva Bernier, Director
 
-### Web Developer
-- Rémy Vanherweghem, Digital Communications Analyst
+### Web Development
+- Mohammed Elhasnaoui, Web Application Developer (Student)
+- Rémy Vanherweghem, Manager, Digital Strategy and Parliamentary Reporting
 
 
-For further information, please contact [pbo-dpb@parl.gc.ca](mailto:pbo-dpb@parl.gc.ca).
+For further information, please [contact the Office of the Parliamentary Budget Officer](https://www.pbo-dpb.ca/en/contact--contact).
