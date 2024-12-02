@@ -1,29 +1,27 @@
 <template>
-<main  v-if="!$root.renderUserGuide">
-  <div class="mb-8">
-    <Intro></Intro>
-  </div>
-  <div aria-live="polite" :aria-busy="!payload">
-    <loading-indicator
-      v-if="!payload"
-      aria-hidden="true"
-      class="w-8 h-8 mb-8"
-    ></loading-indicator>
-    <template v-else>
-      <Meta></Meta>
-      <section class="flex flex-col lg:grid lg:grid-cols-4 gap-8 my-8">
-        <div class="col-span-3 flex flex-col gap-8">
-          <Sections></Sections>
-          
-        </div>
-        <div class="lg:border-l border-gray-100 lg:pl-8">
-          <Sidebar></Sidebar>
-        </div>
-      </section>
-      <Results></Results>
-    </template>
-  </div>
-  <Outro></Outro>
+  <DebugBar v-if="debug"></DebugBar>
+  <main v-if="!$root.renderUserGuide">
+    <div class="mb-8">
+      <Intro></Intro>
+    </div>
+    <div aria-live="polite" :aria-busy="!payload">
+      <loading-indicator v-if="!payload" aria-hidden="true" class="w-8 h-8 mb-8"></loading-indicator>
+      <template v-else>
+        <Meta>
+        </Meta>
+        <section class="flex flex-col lg:grid lg:grid-cols-4 gap-8 my-8">
+          <div class="col-span-3 flex flex-col gap-8">
+            <Sections></Sections>
+
+          </div>
+          <div class="lg:border-l border-gray-100 lg:pl-8">
+            <Sidebar></Sidebar>
+          </div>
+        </section>
+        <Results></Results>
+      </template>
+    </div>
+    <Outro></Outro>
   </main>
 
   <UserGuide v-else></UserGuide>
@@ -31,6 +29,7 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import Localizer from "./Localizer.js";
 import payloadUrl from "./assets/payload.json?url";
 import Intro from "./components/Meta/Intro.vue";
@@ -48,7 +47,9 @@ import UserGuide from "./components/Meta/UserGuide.vue";
 import WrapperEventDispatcher from "./WrapperEventDispatcher.js";
 
 
-
+const DebugBar = defineAsyncComponent(() =>
+  import("./components/DebugBar.vue")
+);
 
 export default {
   data() {
@@ -66,8 +67,9 @@ export default {
     Sections,
     Results,
     Sidebar,
-    UserGuide
-},
+    UserGuide,
+    DebugBar,
+  },
   mounted() {
     WrapperEventDispatcher.dispatch(this.strings.title);
     fetch(payloadUrl)
@@ -78,7 +80,7 @@ export default {
       });
   },
   props: {
-    publicPath: String,
+    debug: { type: [Boolean, String], default: false },
   },
   computed: {
     language() {
@@ -101,7 +103,7 @@ export default {
     absoluteBalance() {
       return Math.abs(this.balance) / 1000000;
     },
-    
+
     fullTextTotal() {
       const md = new Remarkable();
       return md.render(
@@ -119,7 +121,8 @@ export default {
 </script>
 <style>
 @import "./index.css";
+
 .footnote-backref {
-    display:none;
+  display: none;
 }
 </style>
