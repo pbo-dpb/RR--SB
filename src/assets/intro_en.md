@@ -1,1 +1,1 @@
-The Parliamentary Budget Officer has prepared this tool to allow parliamentarians and the general public to broadly estimate the revenue impacts of changes to the federal tax system.
+Welcome to the Ready Reckoner, a Web tool developed by the Parliamentary Budget Officer. This tool is designed to help both parliamentarians and the general public easily estimate the revenue impacts of potential changes to the federal tax system.

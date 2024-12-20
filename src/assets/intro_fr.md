@@ -1,1 +1,1 @@
-Le directeur parlementaire du budget a établi cet outil pour permettre aux parlementaires et au grand public d'estimer approximativement l’incidence sur les recettes des changements au régime fiscal fédéral.
+Bienvenue sur le Simulateur Budgétaire, un outil en ligne développé par le Directeur parlementaire du budget. Cet outil est conçu pour aider à la fois les parlementaires et le grand public à estimer facilement les effets sur les recettes des changements potentiels du régime fiscal fédéral.

@@ -19,9 +19,6 @@
         </sidebar-kv>
       </div>
 
-      <button
-        class="hidden lg:block mt-4 text-sm font-semibold border border-blue-800 text-blue-800 dark:text-blue-200 dark:border-blue-200 rounded px-4 py-1 w-full hover:bg-blue-100 dark:hover:bg-blue-800"
-        @click="triggerPrint">{{ $root.strings.print }}</button>
 
     </div>
 
@@ -49,9 +46,7 @@ export default {
       const prBody = document.createElement("body");
       prHtml.appendChild(prBody);
 
-      const tailwindCdn = document.createElement('script');
-      tailwindCdn.setAttribute('src', 'https://cdn.tailwindcss.com');
-      prBody.appendChild(tailwindCdn);
+
 
       const container = document.createElement('div');
       container.setAttribute('class', 'p-8');
