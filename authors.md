@@ -1,4 +1,4 @@
-## Latest update (December 2024):
+## Latest update
 
 ### Lead Analyst
 - Zachary Vrhovsek, Analyst

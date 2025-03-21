@@ -1,5 +1,5 @@
 <template>
-    <component :is="'button'" class="rounded px-4 py-2 font-bold" :class="buttonClasses" type="button" @click="click"
+    <component :is="'button'" class="rounded-sm px-4 py-2 font-bold" :class="buttonClasses" type="button" @click="click"
         :disabled="loading || disabled" :active="active ? true : null">
         <div class="flex flex-row items-center gap-2 justify-center" v-show="!loading">
             <slot></slot>

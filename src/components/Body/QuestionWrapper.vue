@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col lg:grid grid-cols-8 gap-4 items-center bg-gray-50 dark:bg-gray-800 rounded-sm -mx-2 p-2">
+  <div class="flex flex-col lg:grid grid-cols-8 gap-4 items-center bg-gray-50 dark:bg-gray-800 rounded-xs -mx-2 p-2">
     <div class="lg:col-span-4 w-full">
       <label class="font-semibold" :for="uid">{{ question.name }}</label>
 
@@ -35,7 +35,7 @@
     </div>
 
     <div class="text-center" :class="{ hidden: !question.isAltered, 'lg:block': !question.isAltered }">
-      <span class="bordered text-white print:text-black font-semibold text-sm px-1 py-.5 rounded-sm" :class="{
+      <span class="bordered text-white print:text-black font-semibold text-sm px-1 py-.5 rounded-xs" :class="{
         'bg-red-800': question.userValueImpact < 0,
         'bg-green-800': question.userValueImpact > 0,
         'bg-gray-500': !question.isAltered,
