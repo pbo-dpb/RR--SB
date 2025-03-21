@@ -377,8 +377,8 @@
                     "description_en": null,
                     "description_fr": null,
                     "default_value": 15,
-                    "unit_value_down": 3827061274,
-                    "unit_value_up": 3827061274,
+                    "unit_value_down": 3980143725,
+                    "unit_value_up": 3980143725,
                     "unit_style": "percent",
                     "minimum": 10,
                     "maximum": 20,
@@ -390,8 +390,8 @@
                     "description_en": "Increasing the small business rate increases the tax payable by small corporations on the income below the small business limit.",
                     "description_fr": "Une augmentation du taux d'impôt sur le revenu des petites entreprises augmente l'impôt payable par ces sociétés sur leur revenu inférieur au plafond des affaires.",
                     "default_value": 9,
-                    "unit_value_down": 664062789,
-                    "unit_value_up": 664062789,
+                    "unit_value_down": 690625301,
+                    "unit_value_up": 690625301,
                     "unit_style": "percent",
                     "minimum": 6.0,
                     "maximum": 12.0,
@@ -408,11 +408,11 @@
                     "maximum": 700000.0,
                     "step": 100000.0,
                     "_hard_coded_steps": {
-                        "300000": 1240898072,
-                        "400000": 522694063,
+                        "300000": 1290533995,
+                        "400000": 543601825,
                         "500000": 0,
-                        "600000": -308981449,
-                        "700000": -545159659
+                        "600000": -321340707,
+                        "700000": -566966045
                     },
                     "function": "return q._hard_coded_steps[q.user_value]"
                 },
