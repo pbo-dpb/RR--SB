@@ -1,6 +1,6 @@
 {
     "total_revenue": 496591000000,
-    "last_update": "2024/12/02",
+    "last_update": "2025-03-21",
     "sections": [
         {
             "title_en": "Personal Income Tax (Marginal Tax Rates)",
@@ -14,7 +14,7 @@
                     "description_en": null,
                     "description_fr": null,
                     "default_value": 15,
-                    "unit_value_down":  5884962112,
+                    "unit_value_down": 5884962112,
                     "unit_value_up": 5884962112,
                     "unit_style": "percent",
                     "minimum": 13.0,
@@ -201,7 +201,7 @@
                     "name_fr": "Changement de 50 $ du crédit pour adulte",
                     "description_en": null,
                     "description_fr": null,
-                    "default_value": 349, 
+                    "default_value": 349,
                     "unit_value_down": -16928279,
                     "unit_value_up": -16928279,
                     "unit_style": "currency",
