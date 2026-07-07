@@ -28,7 +28,7 @@
                     "description_fr": null,
                     "default_value": 20.5,
                     "unit_value_down": 3696604875,
-                    "unit_value_up":  3696604875,
+                    "unit_value_up": 3696604875,
                     "unit_style": "percent",
                     "minimum": 18.5,
                     "maximum": 22.5,

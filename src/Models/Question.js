@@ -8,14 +8,13 @@ export default class Question {
         this.unit_name = o[`unit_name_${language}`];
 
         for (const [key, value] of Object.entries(o)) {
-            this[key] = value
+            this[key] = value;
         }
 
         this.user_value = o.default_value.valueOf();
 
         this.cached_dynamic_eval_results = {};
     }
-
 
     get isAltered() {
         if (this.user_value == this.default_value) return 0;
@@ -24,31 +23,34 @@ export default class Question {
 
     get userValueUnitDiffs() {
         if (!this.isAltered) return 0;
-        return Math.abs(this.user_value - this.default_value) / this.step * this.isAltered;
+        return (
+            (Math.abs(this.user_value - this.default_value) / this.step) *
+            this.isAltered
+        );
     }
 
-
     getDynamicUserImpact() {
-
         // Cache the results of the dynamic evaluation for speed
         const userValueStr = String(this.user_value);
-        if (this.cached_dynamic_eval_results[userValueStr]) return this.cached_dynamic_eval_results[userValueStr];
+        if (this.cached_dynamic_eval_results[userValueStr])
+            return this.cached_dynamic_eval_results[userValueStr];
 
         let indirectEval = function (q, func) {
             "use strict";
-            return (new Function("q", func))(q);
-        }
+            return new Function("q", func)(q);
+        };
 
-        let impact = indirectEval(JSON.parse(JSON.stringify(this)), this.function);
+        let impact = indirectEval(
+            JSON.parse(JSON.stringify(this)),
+            this.function,
+        );
 
         this.cached_dynamic_eval_results[userValueStr] = impact;
 
         return impact;
     }
 
-
     get userValueImpact() {
-
         if (this.function) {
             return this.getDynamicUserImpact();
         }
@@ -57,6 +59,5 @@ export default class Question {
             return this.userValueUnitDiffs * (this.unit_value_up * this.step);
         }
         return this.userValueUnitDiffs * (this.unit_value_down * this.step);
-
     }
 }
